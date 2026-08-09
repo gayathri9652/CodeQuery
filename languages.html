@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>CodeQuery Languages</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="home-container">
+
+
+<h1>🎮 Choose Your Coding World</h1>
+
+
+<h2>Start Your Adventure 🚀</h2>
+
+
+
+<div class="card">
+
+
+
+<h2>🌳 HTML Forest</h2>
+
+<p>
+Learn webpage structure and HTML tags.
+</p>
+
+
+<button onclick="openHTML()">
+
+🌳 Enter HTML Forest 🔓
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+
+
+<h2 id="cssTitle">
+🏙️ CSS City 🔒
+</h2>
+
+
+<p>
+Design beautiful websites using CSS.
+</p>
+
+
+<button id="cssBtn" disabled>
+
+🔒 Locked
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+
+
+<h2 id="jsTitle">
+⚡ JavaScript Kingdom 🔒
+</h2>
+
+
+<p>
+Fight bugs using JavaScript powers.
+</p>
+
+
+<button id="jsBtn" disabled>
+
+🔒 Locked
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<br>
+
+
+
+<a href="dashboard.html">
+
+<button>
+
+⬅ Back Dashboard
+
+</button>
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+
+
+<script>
+    
+
+function openHTML(){
+
+window.location.href="lesson.html";
+
+}
+
+
+
+
+
+
+// CSS Unlock Check
+
+
+let cssUnlock = localStorage.getItem("CSSUnlocked");
+
+
+
+if(cssUnlock=="true"){
+
+
+document.getElementById("cssTitle").innerHTML =
+"🏙️ CSS City 🔓";
+
+
+let cssButton =
+document.getElementById("cssBtn");
+
+
+cssButton.disabled=false;
+
+
+cssButton.innerHTML =
+"🏙️ Enter CSS City";
+
+
+cssButton.onclick=function(){
+
+window.location.href="cssmission.html";
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+// JavaScript Unlock Check
+
+
+let jsUnlock = localStorage.getItem("JSUnlocked");
+
+
+
+if(jsUnlock=="true"){
+
+
+document.getElementById("jsTitle").innerHTML =
+"⚡ JavaScript Kingdom 🔓";
+
+
+
+let jsButton =
+document.getElementById("jsBtn");
+
+
+
+jsButton.disabled=false;
+
+
+jsButton.innerHTML =
+"⚡ Enter JavaScript Kingdom";
+
+
+
+jsButton.onclick=function(){
+
+window.location.href="jsmission.html";
+
+}
+
+
+
+}
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>

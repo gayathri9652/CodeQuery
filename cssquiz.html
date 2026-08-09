@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Quiz - CodeQuery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<div class="mission">
+
+
+<h1>🏙️ CSS City Quiz</h1>
+
+
+<h2>🤖 Byte</h2>
+
+<p id="byteText">
+Welcome Coder! Complete this CSS quiz and unlock JavaScript Kingdom.
+</p>
+
+
+<hr>
+
+
+<form id="quizForm">
+
+
+<h3>1. What does CSS stand for?</h3>
+
+<input type="radio" name="q1" value="correct">
+Cascading Style Sheets
+<br>
+
+<input type="radio" name="q1">
+Computer Style System
+<br>
+
+<input type="radio" name="q1">
+Creative Style Sheets
+
+
+
+<h3>2. Which property changes text color?</h3>
+
+<input type="radio" name="q2">
+background-color
+<br>
+
+<input type="radio" name="q2" value="correct">
+color
+<br>
+
+<input type="radio" name="q2">
+font
+
+
+
+<h3>3. Which property changes the font style?</h3>
+
+<input type="radio" name="q3">
+border
+<br>
+
+<input type="radio" name="q3" value="correct">
+font-family
+<br>
+
+<input type="radio" name="q3">
+padding
+
+
+
+<h3>4. Which property adds space inside an element?</h3>
+
+<input type="radio" name="q4">
+margin
+<br>
+
+<input type="radio" name="q4" value="correct">
+padding
+<br>
+
+<input type="radio" name="q4">
+color
+
+
+
+<h3>5. Which property creates a border?</h3>
+
+<input type="radio" name="q5" value="correct">
+border
+<br>
+
+<input type="radio" name="q5">
+font-size
+<br>
+
+<input type="radio" name="q5">
+background
+
+
+
+<br><br>
+
+
+<button type="button" onclick="checkQuiz()">
+🚀 Submit Quiz
+</button>
+
+
+</form>
+
+
+
+<h2 id="result"></h2>
+
+
+
+<button id="jsButton" style="display:none;" onclick="goJS()">
+⚡ Enter JavaScript Kingdom
+</button>
+
+
+
+</div>
+
+
+
+
+<script>
+
+
+function speakByte(text){
+
+let speech = new SpeechSynthesisUtterance(text);
+
+speech.lang="en-US";
+
+speech.rate=0.9;
+
+speech.pitch=1;
+
+speech.volume=1;
+
+
+window.speechSynthesis.cancel();
+
+window.speechSynthesis.speak(speech);
+
+}
+
+
+
+
+window.onload=function(){
+
+speakByte(
+"Welcome Coder. This is CSS City Quiz. Answer five questions correctly and unlock JavaScript Kingdom."
+);
+
+};
+
+
+
+
+
+function checkQuiz(){
+
+
+let score=0;
+
+
+let correctAnswers =
+document.querySelectorAll('input[value="correct"]:checked');
+
+
+score = correctAnswers.length;
+
+
+
+if(score >= 4){
+
+
+document.getElementById("result").innerHTML =
+"🎉 Congratulations Coder! Your Score: "+score+"/5 <br> ⚡ JavaScript Kingdom Unlocked";
+
+
+speakByte(
+"Excellent Coder. You completed CSS Quiz and unlocked JavaScript Kingdom."
+);
+
+
+document.getElementById("jsButton").style.display="block";
+
+
+}
+
+else{
+
+
+document.getElementById("result").innerHTML =
+"🤖 Byte: Score "+score+"/5. Try again and improve your skills.";
+
+
+speakByte(
+"Keep trying Coder. Learn CSS and attempt the quiz again."
+);
+
+
+}
+
+
+}
+
+
+
+
+function goJS(){
+
+window.location.href="javascript.html";
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>

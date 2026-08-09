@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>CodeQuery Certificate</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="home-container">
+
+
+<h1>📜 Certificate of Completion</h1>
+
+
+<div class="certificate"></div>
+
+
+<h2>🎉 Congratulations!</h2>
+
+
+<p>
+This certificate is proudly presented to
+</p>
+
+
+<h2 id="playerName">
+Code Hero
+</h2>
+
+
+<p>
+For successfully completing the
+</p>
+
+
+<h2>
+🚀 CodeQuery Coding Adventure
+</h2>
+
+
+<p>
+Completed Worlds:
+</p>
+
+
+<p>
+🌳 HTML Forest ✅
+</p>
+
+<p>
+🏙️ CSS City ✅
+</p>
+
+<p>
+⚡ JavaScript Kingdom ✅
+</p>
+
+
+
+<h2>
+👑 Code Hero Master
+</h2>
+
+
+<p>
+Date:
+<span id="date"></span>
+</p>
+
+
+
+</div>
+
+
+
+<button onclick="window.print()">
+🖨️ Print Certificate
+</button>
+
+
+
+<br><br>
+
+
+<a href="dashboard.html">
+
+<button>
+⬅ Back Dashboard
+</button>
+
+</a>
+
+
+
+</div>
+
+
+
+
+<script>
+
+
+let name = localStorage.getItem("username");
+
+
+if(name){
+
+document.getElementById("playerName").innerHTML = name;
+
+}
+
+
+
+let today = new Date();
+
+document.getElementById("date").innerHTML =
+today.toLocaleDateString();
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

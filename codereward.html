@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>CodeQuery Hero Reward</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="home-container">
+
+
+<div class="card">
+
+
+<h1>🏆 Code Hero Reward</h1>
+
+
+<h2>🎉 Congratulations Coder!</h2>
+
+
+<p>
+You defeated the Bug Monster and saved the Coding Kingdom ⚡
+</p>
+
+
+<hr>
+
+
+<h2>🎁 Your Rewards</h2>
+
+
+<p>⭐ XP: <span id="xp">0</span></p>
+
+<p>🪙 Coins: <span id="coins">0</span></p>
+
+<p>🏅 Badge: JavaScript Hero</p>
+
+
+
+<hr>
+
+
+
+<button onclick="goQuiz()">
+
+📝 Start Final Quiz
+
+</button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<script>
+
+
+let xp = localStorage.getItem("XP") || 0;
+
+let coins = localStorage.getItem("Coins") || 0;
+
+
+document.getElementById("xp").innerHTML = xp;
+
+document.getElementById("coins").innerHTML = coins;
+
+
+
+
+
+function goQuiz(){
+
+window.location.href="finalquiz.html";
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>

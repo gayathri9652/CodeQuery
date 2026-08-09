@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Final Quiz - CodeQuery</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="home-container">
+
+
+<h1>📝 Final Coding Quiz</h1>
+
+<h2>👑 Become a Code Hero</h2>
+
+
+<div class="card">
+
+
+<h3>1. HTML is used for?</h3>
+
+<button onclick="checkAnswer(this,'correct')">
+Creating webpage structure
+</button>
+
+<button onclick="checkAnswer(this,'wrong')">
+Editing images
+</button>
+
+
+
+<h3>2. Which property changes text color in CSS?</h3>
+
+<button onclick="checkAnswer(this,'correct')">
+color
+</button>
+
+<button onclick="checkAnswer(this,'wrong')">
+padding
+</button>
+
+
+
+<h3>3. Which keyword creates a variable in JavaScript?</h3>
+
+<button onclick="checkAnswer(this,'correct')">
+let
+</button>
+
+<button onclick="checkAnswer(this,'wrong')">
+style
+</button>
+
+
+
+<h3>4. Which tag creates a heading in HTML?</h3>
+
+<button onclick="checkAnswer(this,'correct')">
+&lt;h1&gt;
+</button>
+
+<button onclick="checkAnswer(this,'wrong')">
+&lt;img&gt;
+</button>
+
+
+
+<h3>5. Which function displays a popup in JavaScript?</h3>
+
+<button onclick="checkAnswer(this,'correct')">
+alert()
+</button>
+
+<button onclick="checkAnswer(this,'wrong')">
+border()
+</button>
+
+
+
+<h2 id="score">
+Score: 0
+</h2>
+
+
+
+<button id="certificateBtn" 
+style="display:none;"
+onclick="getCertificate()">
+
+📜 Get Certificate
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<script>
+
+
+let score = 0;
+
+
+function checkAnswer(button,answer){
+
+
+if(answer=="correct"){
+
+score++;
+
+button.style.background="green";
+
+}
+
+else{
+
+button.style.background="red";
+
+}
+
+
+document.getElementById("score").innerHTML =
+"Score: " + score + "/5";
+
+
+
+if(score>=5){
+
+document.getElementById("certificateBtn").style.display="block";
+
+}
+
+
+}
+
+
+
+function getCertificate(){
+
+window.location.href="certificate.html";
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

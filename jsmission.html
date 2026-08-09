@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>JavaScript Kingdom Mission - CodeQuery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="js-kingdom">
+
+
+<div class="mission">
+
+
+<h1>⚡ JavaScript Kingdom</h1>
+
+<h2>🐛 Bug Monster Battle</h2>
+
+
+<h2>🤖 Byte</h2>
+
+
+<p id="story">
+
+🤖 Byte: Coder! Bug Monster attacked our Coding Kingdom.
+Use JavaScript powers and save the kingdom!
+
+</p>
+
+
+<hr>
+
+
+
+
+<div id="mission1">
+
+<h3>📦 Mission 1: Restore Power Crystal</h3>
+
+<p>
+Create a variable named <b>energy</b> and store value 100.
+</p>
+
+
+<textarea id="code1" placeholder="Write JavaScript code here..."></textarea>
+
+
+<br>
+
+
+<button onclick="checkMission1()">
+
+⚔️ Restore Power
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<div id="mission2" style="display:none;">
+
+
+<h3>🛡️ Mission 2: Activate Kingdom Shield</h3>
+
+
+<p>
+Create an if condition to check if energy is greater than 50.
+</p>
+
+
+<textarea id="code2" placeholder="Write JavaScript code here..."></textarea>
+
+
+<br>
+
+
+<button onclick="checkMission2()">
+
+🛡️ Activate Shield
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div id="mission3" style="display:none;">
+
+
+<h3>⚔️ Mission 3: Create Hero Attack</h3>
+
+
+<p>
+Create a function named attack to defeat the Bug Monster.
+</p>
+
+
+<textarea id="code3" placeholder="Write JavaScript code here..."></textarea>
+
+
+<br>
+
+
+<button onclick="checkMission3()">
+
+⚔️ Attack Bug Monster
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div id="mission4" style="display:none;">
+
+
+<h3>🐉 Final Boss: Save Coding Kingdom</h3>
+
+
+<p>
+
+Combine your JavaScript powers:
+
+<br>
+
+1. Create energy variable
+
+<br>
+
+2. Use if condition
+
+<br>
+
+3. Call attack function
+
+</p>
+
+
+
+<textarea id="code4" placeholder="Write final battle code here..."></textarea>
+
+
+<br>
+
+
+
+<button onclick="checkMission4()">
+
+🔥 Defeat Bug Monster
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<h2 id="result"></h2>
+
+
+
+
+
+<button id="rewardBtn" style="display:none;" onclick="goReward()">
+
+🏆 Get Code Hero Reward
+
+</button>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+
+
+
+function addJSReward(){
+
+
+let xp = Number(localStorage.getItem("XP")) || 0;
+
+let coins = Number(localStorage.getItem("Coins")) || 0;
+
+
+xp += 20;
+
+coins += 5;
+
+
+
+localStorage.setItem("XP",xp);
+
+localStorage.setItem("Coins",coins);
+
+
+
+}
+
+
+
+
+
+
+
+
+function speakByte(text){
+
+
+let speech = new SpeechSynthesisUtterance(text);
+
+
+speech.rate=0.9;
+
+speech.pitch=1;
+
+
+speechSynthesis.speak(speech);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+function checkMission1(){
+
+
+let code=document.getElementById("code1").value;
+
+
+
+if(code.includes("let") && code.includes("energy")){
+
+
+document.getElementById("result").innerHTML=
+
+"🎉 Mission 1 Complete! Power Crystal Restored ⚡";
+
+
+
+speakByte(
+"Great job Coder. The power crystal is restored."
+);
+
+
+
+document.getElementById("mission2").style.display="block";
+
+
+}
+
+else{
+
+
+document.getElementById("result").innerHTML=
+
+"🤖 Byte Hint: Create an energy variable using let.";
+
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+function checkMission2(){
+
+
+let code=document.getElementById("code2").value;
+
+
+
+if(code.includes("if")){
+
+
+document.getElementById("result").innerHTML=
+
+"🎉 Mission 2 Complete! Shield Activated 🛡️";
+
+
+
+speakByte(
+"Excellent Coder. The kingdom shield is active."
+);
+
+
+
+document.getElementById("mission3").style.display="block";
+
+
+}
+
+else{
+
+
+document.getElementById("result").innerHTML=
+
+"🤖 Byte Hint: Use an if condition.";
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+function checkMission3(){
+
+
+let code=document.getElementById("code3").value;
+
+
+
+if(code.includes("function")){
+
+
+document.getElementById("result").innerHTML=
+
+"🎉 Mission 3 Complete! Attack Weapon Created ⚔️";
+
+
+
+speakByte(
+"Awesome Coder. Your attack weapon is ready."
+);
+
+
+
+document.getElementById("mission4").style.display="block";
+
+
+}
+
+else{
+
+
+document.getElementById("result").innerHTML=
+
+"🤖 Byte Hint: Create a function named attack.";
+
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+function checkMission4(){
+
+
+let code=document.getElementById("code4").value;
+
+
+
+if(
+code.includes("let") &&
+code.includes("if") &&
+code.includes("function")
+){
+
+
+addJSReward();
+
+
+localStorage.setItem("JSUnlocked","true");
+
+
+
+document.getElementById("result").innerHTML=
+
+"🏆 Bug Monster Defeated! Coding Kingdom Saved! ⭐ +20 XP";
+
+
+
+speakByte(
+"Congratulations Coder. You defeated the Bug Monster."
+);
+
+
+
+document.getElementById("rewardBtn").style.display="block";
+
+
+}
+
+else{
+
+
+document.getElementById("result").innerHTML=
+
+"🤖 Byte Hint: Use variable, condition and function together.";
+
+
+}
+
+}
+
+
+
+
+
+
+
+function goReward(){
+
+
+window.location.href="codereward.html";
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>JavaScript Kingdom - CodeQuery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<div class="js-kingdom">
+
+
+<h1>⚡ Welcome to JavaScript Kingdom!</h1>
+
+
+<div class="robot">
+
+<h2>🤖 Byte</h2>
+
+<p id="byteText">
+
+Welcome Coder! ⚡
+
+You entered JavaScript Kingdom.
+
+A dangerous Bug Monster 🐛 is attacking our coding kingdom.
+Use your JavaScript powers and defeat it!
+
+</p>
+
+</div>
+
+
+
+<h2>📚 JavaScript Lesson</h2>
+
+
+<h3>1. What is JavaScript?</h3>
+
+<p>
+JavaScript is a programming language used to add logic and interaction to websites.
+</p>
+
+
+
+<h3>2. Variables 📦</h3>
+
+<p>
+Variables store information in a program.
+</p>
+
+<pre>
+let score = 10;
+</pre>
+
+
+
+<h3>3. Conditions 🔥</h3>
+
+<p>
+Conditions help programs make decisions.
+</p>
+
+<pre>
+if(score > 5){
+
+console.log("Win");
+
+}
+</pre>
+
+
+
+<h3>4. Functions ⚙️</h3>
+
+<p>
+Functions are reusable blocks of code.
+</p>
+
+<pre>
+function attack(){
+
+console.log("Bug defeated");
+
+}
+</pre>
+
+
+
+<br>
+
+
+<a href="jsmission.html">
+
+<button>
+⚔️ Fight Bug Monster
+</button>
+
+</a>
+
+
+
+</div>
+
+
+
+
+<script>
+
+function speakByte(text){
+
+let speech = new SpeechSynthesisUtterance(text);
+
+speech.rate=0.9;
+
+speech.pitch=1;
+
+speechSynthesis.speak(speech);
+
+}
+
+
+
+window.onload=function(){
+
+speakByte(
+"Welcome Coder. You entered JavaScript Kingdom. The Bug Monster is attacking. Learn JavaScript powers and defeat it."
+);
+
+};
+
+
+</script>
+
+
+
+</body>
+
+</html>

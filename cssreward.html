@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Reward - CodeQuery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+<div class="mission">
+
+
+<h1>🎉 CSS City Complete!</h1>
+
+
+<h2>🤖 Byte</h2>
+
+
+<p>
+Congratulations Coder! 🏆<br>
+You successfully designed CSS City buildings.
+</p>
+
+
+<hr>
+
+
+<h2>🎁 Your Rewards</h2>
+
+
+<p>⭐ XP Earned: 50</p>
+
+<p>🪙 Coins Earned: 30</p>
+
+<p>🏅 Badge Unlocked: CSS Designer</p>
+
+
+<br>
+
+
+<button onclick="speakByte()">
+🔊 Listen to Byte
+</button>
+
+
+<br><br>
+
+
+<a href="cssquiz.html">
+
+<button>
+📝 Start CSS Quiz
+</button>
+
+</a>
+
+
+
+</div>
+
+
+
+
+<script>
+
+
+function speakByte(){
+
+let speech = new SpeechSynthesisUtterance(
+
+"Congratulations Coder. You completed CSS City and unlocked the CSS Designer badge. Now complete the quiz to enter JavaScript Kingdom."
+
+);
+
+
+speech.rate = 0.9;
+
+
+speechSynthesis.speak(speech);
+
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html><!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Forest Mission</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="mission">
+
+<h1>🌳 HTML Forest Mission</h1>
+
+<h2>🤖 Byte</h2>
+
+<p id="story">
+🤖 Byte: Coder, I want to reach the Banyan Tree 🌳.
+Complete my first mission to move forward.
+</p>
+
+
+<div id="mission1">
+
+<h3>🌱 Mission 1: Find the Banyan Tree</h3>
+
+<p>
+Create a heading for the Banyan Tree using HTML.
+</p>
+
+<textarea id="code1" placeholder="Write your HTML code here..."></textarea>
+
+<br>
+
+<button onclick="checkMission1()">
+🚀 Submit Mission
+</button>
+
+</div>
+
+
+
+<div id="mission2" style="display:none;">
+
+<h3>🌿 Mission 2: Create Forest Message</h3>
+
+<p>
+Create a paragraph that describes the Banyan Tree.
+</p>
+
+<textarea id="code2" placeholder="Write your HTML code here..."></textarea>
+
+<br>
+
+<button onclick="checkMission2()">
+🚀 Submit Mission
+</button>
+
+</div>
+
+
+
+<div id="mission3" style="display:none;">
+
+<h3>🦋 Mission 3: Add Forest Image</h3>
+
+<p>
+Add an image to show the beautiful forest.
+</p>
+
+<textarea id="code3" placeholder="Write your HTML code here..."></textarea>
+
+<br>
+
+<button onclick="checkMission3()">
+🚀 Submit Mission
+</button>
+
+</div>
+
+
+
+<h2 id="result"></h2>
+
+</div>
+
+
+
+<script>
+
+
+function speakByte(text){
+
+let speech = new SpeechSynthesisUtterance(text);
+
+speech.rate = 0.9;
+
+speechSynthesis.speak(speech);
+
+}
+
+
+// Reward Function
+
+function addReward(){
+
+let xp = Number(localStorage.getItem("XP")) || 0;
+
+let coins = Number(localStorage.getItem("Coins")) || 0;
+
+
+xp += 20;
+
+coins += 5;
+
+
+localStorage.setItem("XP", xp);
+
+localStorage.setItem("Coins", coins);
+
+}
+
+
+
+
+function checkMission1(){
+
+let code = document.getElementById("code1").value;
+
+
+if(code.includes("<h1>") && code.includes("</h1>")){
+
+
+addReward();
+
+
+document.getElementById("result").innerHTML =
+"🎉 Mission 1 Complete! 🌳 Banyan Tree found! ⭐ +20 XP";
+
+
+speakByte(
+"Great job Coder! You found the Banyan Tree. Now your next mission is unlocked."
+);
+
+
+document.getElementById("mission2").style.display="block";
+
+
+}
+
+else{
+
+
+document.getElementById("result").innerHTML =
+"🤖 Byte Hint: Use a heading tag to complete this mission.";
+
+
+speakByte(
+"Oops Coder! Try again. Use the heading tag correctly."
+);
+
+
+}
+
+}
+
+
+
+
+function checkMission2(){
+
+let code = document.getElementById("code2").value;
+
+
+if(code.includes("<p>") && code.includes("</p>")){
+
+
+addReward();
+
+
+document.getElementById("result").innerHTML =
+"🎉 Mission 2 Complete! 🌿 Forest message created! ⭐ +20 XP";
+
+
+speakByte(
+"Excellent Coder! The forest message is ready. Your next mission is unlocked."
+);
+
+
+document.getElementById("mission3").style.display="block";
+
+
+}
+
+else{
+
+
+document.getElementById("result").innerHTML =
+"🤖 Byte Hint: Use a paragraph tag.";
+
+
+speakByte(
+"Try again Coder. Use the paragraph tag correctly."
+);
+
+
+}
+
+}
+
+
+
+
+function checkMission3(){
+
+let code = document.getElementById("code3").value;
+
+
+if(code.includes("<img")){
+
+
+addReward();
+
+
+document.getElementById("result").innerHTML =
+"🎉 All Missions Complete! 🌳 You reached the Banyan Tree! 🏆";
+
+
+speakByte(
+"Congratulations Coder! You completed HTML Forest missions and reached the Banyan Tree."
+);
+
+
+
+setTimeout(function(){
+
+window.location.href="reward.html";
+
+},3000);
+
+
+}
+
+else{
+
+
+document.getElementById("result").innerHTML =
+"🤖 Byte Hint: Use the image tag.";
+
+
+speakByte(
+"Oops Coder. Add an image tag and try again."
+);
+
+
+}
+
+}
+
+
+
+function goCSSCity(){
+
+window.location.href="csscity.html";
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

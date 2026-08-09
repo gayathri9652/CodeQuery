@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cod<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>CodeQuery Rewards</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="home-container">
+
+
+<h1>🎁 CodeQuery Rewards</h1>
+
+<h2>Congratulations Coder! 🎉</h2>
+
+
+<div class="card">
+
+
+<h2>🏆 Mission Completed</h2>
+
+
+<p>
+🌳 You completed HTML Forest Missions!
+</p>
+
+
+<p>
+⭐ XP Earned:
+<span id="rewardXP">0</span>
+</p>
+
+
+<p>
+🪙 Coins Earned:
+<span id="rewardCoins">0</span>
+</p>
+
+
+
+<h2>🏅 Your Badge</h2>
+
+
+<p id="badge">
+🌱 HTML Beginner
+</p>
+
+
+
+</div>
+<button onclick="startHTMLQuiz()">
+📝 Start HTML Quiz
+</button>
+
+<br><br>
+
+
+
+<a href="dashboard.html">
+
+<button>
+⬅ Back to Dashboard
+</button>
+
+</a>
+
+
+
+</div>
+
+
+
+<script>
+
+
+let xp = localStorage.getItem("XP") || 0;
+
+let coins = localStorage.getItem("Coins") || 0;
+
+
+
+document.getElementById("rewardXP").innerHTML = xp;
+
+
+document.getElementById("rewardCoins").innerHTML = coins;
+
+
+
+if(Number(xp) >= 60){
+
+document.getElementById("badge").innerHTML =
+"🏅 HTML Forest Hero";
+
+}
+function startHTMLQuiz(){
+
+    window.location.href="htmlquiz.html";
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>

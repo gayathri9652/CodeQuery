@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>CodeQuery Leaderboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="home-container">
+
+
+<h1>🏆 CodeQuery Leaderboard</h1>
+
+<h2>Top Coding Heroes</h2>
+
+
+<div class="card">
+
+
+<h3>🥇 Coding Master</h3>
+<p>⭐ XP: 500</p>
+
+
+<h3>🥈 Code Warrior</h3>
+<p>⭐ XP: 350</p>
+
+
+<h3>🥉 Bug Hunter</h3>
+<p>⭐ XP: 250</p>
+
+
+
+<hr>
+
+
+<h2>👤 Your Score</h2>
+
+
+<p>
+Name:
+<span id="playerName">Coder</span>
+</p>
+
+
+<p>
+⭐ XP:
+<span id="playerXP">0</span>
+</p>
+
+
+</div>
+
+
+
+<a href="dashboard.html">
+
+<button>
+⬅ Back Dashboard
+</button>
+
+</a>
+
+
+
+</div>
+
+
+
+<script>
+
+
+let name = localStorage.getItem("username");
+
+let xp = localStorage.getItem("XP") || 0;
+console.log("Saved XP:", xp);
+
+
+if(name){
+
+document.getElementById("playerName").innerHTML=name;
+
+}
+
+
+document.getElementById("playerXP").innerHTML=xp;
+
+
+</script>
+
+
+</body>
+
+</html>

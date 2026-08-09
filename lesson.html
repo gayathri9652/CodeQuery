@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CodeQuery HTML Forest Lesson</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="html-forest">
+
+<div class="robot">
+
+    <h1>🤖 Welcome Coder!</h1>
+
+
+    <div class="lesson-box">
+
+
+        <h2>🌳 HTML Forest Lesson</h2>
+
+
+        <p>
+            🤖 Byte: Welcome Coder!
+            We are inside the magical HTML Forest.
+        </p>
+
+
+        <p>
+            Today I will teach you the basics of HTML.
+            After completing this lesson, you will get a mission.
+        </p>
+
+
+
+        <hr>
+
+
+
+        <h3>🌱 Lesson 1: What is HTML?</h3>
+
+
+        <p>
+            HTML means HyperText Markup Language.
+            It is used to create the structure of websites.
+        </p>
+
+
+
+        <hr>
+
+
+
+        <h3>🏷️ Lesson 2: HTML Tags</h3>
+
+
+        <p>
+            HTML uses tags to create different parts of a webpage.
+        </p>
+
+
+
+        <p>
+            Heading Tag:
+        </p>
+
+
+        <pre>
+&lt;h1&gt;Welcome Coder&lt;/h1&gt;
+        </pre>
+
+
+
+        <p>
+            Paragraph Tag:
+        </p>
+
+
+        <pre>
+&lt;p&gt;Learn Coding Like a Game&lt;/p&gt;
+        </pre>
+
+
+
+        <p>
+            Image Tag:
+        </p>
+
+
+        <pre>
+&lt;img src="forest.png"&gt;
+        </pre>
+
+
+
+        <p>
+            Link Tag:
+        </p>
+
+
+        <pre>
+&lt;a href="page.html"&gt;Open Page&lt;/a&gt;
+        </pre>
+
+
+
+        <hr>
+
+
+
+        <h3>🎯 Lesson Complete!</h3>
+
+
+        <p>
+            🤖 Byte: Great job Coder!
+            You learned the basics of HTML.
+            Now you are ready for your first mission.
+        </p>
+
+
+
+        <button onclick="speakLesson()">
+            🔊 Listen Byte
+        </button>
+
+
+
+    </div>
+
+
+
+
+    <a href="mission.html">
+
+        <button>
+            Start Mission 🚀
+        </button>
+
+    </a>
+
+
+
+</div>
+
+
+
+
+<script>
+
+
+function speakLesson(){
+
+
+let text =
+"Welcome Coder. We are inside HTML Forest. HTML means HyperText Markup Language. HTML is used to create the structure of websites. You learned heading, paragraph, image and link tags. Now you are ready for your mission.";
+
+
+let speech = new SpeechSynthesisUtterance(text);
+
+
+speech.rate = 0.9;
+
+
+speechSynthesis.speak(speech);
+
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>

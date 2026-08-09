@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS City Mission - CodeQuery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="css-city">
+
+
+<div class="mission">
+
+
+<h1>🏙️ CSS City Mission</h1>
+
+
+<h2>🤖 Byte</h2>
+
+
+<p id="story">
+
+🤖 Byte: Coder! CSS City buildings are looking boring.
+Help me decorate them with CSS powers!
+
+</p>
+
+
+
+<button onclick="speakByte()">
+🔊 Listen to Byte
+</button>
+
+
+
+<hr>
+
+
+
+
+<div id="mission1">
+
+
+<h3>🎨 Mission 1: Color the Building</h3>
+
+
+<p>
+Add a background color to the building using CSS.
+</p>
+
+
+<textarea id="code1" placeholder="Write CSS code here..."></textarea>
+
+
+<br>
+
+
+<button onclick="checkMission1()">
+
+🚀 Submit Mission
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<div id="mission2" style="display:none;">
+
+
+<h3>🔤 Mission 2: Change Building Font</h3>
+
+
+<p>
+Change the building name font using CSS.
+</p>
+
+
+<textarea id="code2" placeholder="Write CSS code here..."></textarea>
+
+
+<br>
+
+
+<button onclick="checkMission2()">
+
+🚀 Submit Mission
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<div id="mission3" style="display:none;">
+
+
+<h3>🧱 Mission 3: Make Building Beautiful</h3>
+
+
+<p>
+Add border and padding to the building.
+</p>
+
+
+<textarea id="code3" placeholder="Write CSS code here..."></textarea>
+
+
+<br>
+
+
+<button onclick="checkMission3()">
+
+🚀 Submit Mission
+
+</button>
+
+
+</div>
+
+
+
+
+
+<h2 id="result"></h2>
+
+
+
+
+
+<button id="rewardButton" 
+style="display:none;" 
+onclick="goReward()">
+
+🏆 Get CSS Reward
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<script>
+
+
+
+function addCSSReward(){
+
+
+let xp = Number(localStorage.getItem("XP")) || 0;
+
+let coins = Number(localStorage.getItem("Coins")) || 0;
+
+
+xp += 20;
+
+coins += 5;
+
+
+
+localStorage.setItem("XP",xp);
+
+localStorage.setItem("Coins",coins);
+
+
+}
+
+
+
+
+
+
+
+function speakByte(){
+
+
+let speech = new SpeechSynthesisUtterance(
+
+"Coder! CSS City buildings need your help. Complete the missions and become a CSS designer."
+
+);
+
+
+speech.rate=0.9;
+
+
+speechSynthesis.speak(speech);
+
+
+}
+
+
+
+
+
+
+
+function checkMission1(){
+
+
+let code=document.getElementById("code1").value;
+
+
+
+if(code.includes("background-color")){
+
+
+document.getElementById("result").innerHTML=
+
+"🎉 Mission 1 Complete! 🎨 Building color added!";
+
+
+
+document.getElementById("mission2").style.display="block";
+
+
+speakText(
+"Great job Coder! Next mission unlocked."
+);
+
+
+}
+
+else{
+
+
+document.getElementById("result").innerHTML=
+
+"🤖 Byte Hint: Use background-color property.";
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+function checkMission2(){
+
+
+let code=document.getElementById("code2").value;
+
+
+
+if(code.includes("font-family")){
+
+
+document.getElementById("result").innerHTML=
+
+"🎉 Mission 2 Complete! 🔤 Font changed!";
+
+
+
+document.getElementById("mission3").style.display="block";
+
+
+speakText(
+"Excellent Coder! Final CSS mission unlocked."
+);
+
+
+}
+
+else{
+
+
+document.getElementById("result").innerHTML=
+
+"🤖 Byte Hint: Use font-family property.";
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+function checkMission3(){
+
+
+let code=document.getElementById("code3").value;
+
+
+
+if(code.includes("border") && code.includes("padding")){
+
+
+addCSSReward();
+
+
+
+localStorage.setItem("JSUnlocked","true");
+
+
+
+document.getElementById("result").innerHTML=
+
+"🏆 All CSS Missions Complete! ⭐ +20 XP";
+
+
+
+speakText(
+"Congratulations Coder! You completed CSS City missions."
+);
+
+
+
+document.getElementById("rewardButton").style.display="block";
+
+
+}
+
+else{
+
+
+document.getElementById("result").innerHTML=
+
+"🤖 Byte Hint: Use border and padding.";
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+function speakText(text){
+
+
+let speech=new SpeechSynthesisUtterance(text);
+
+
+speech.rate=0.9;
+
+
+speechSynthesis.speak(speech);
+
+
+}
+
+
+
+
+
+
+
+
+function goReward(){
+
+
+window.location.href="cssreward.html";
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

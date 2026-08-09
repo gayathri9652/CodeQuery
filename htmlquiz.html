@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Forest Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+<div class="mission">
+
+<h1>📝 HTML Forest Quiz</h1>
+
+<h2>🤖 Byte</h2>
+
+<p>
+Complete this quiz to prove your HTML skills and unlock CSS City 🏙️.
+</p>
+
+
+<hr>
+
+
+<form id="quizForm">
+
+
+<h3>1. What does HTML stand for?</h3>
+
+<input type="radio" name="q1" value="correct">
+HyperText Markup Language
+<br>
+
+<input type="radio" name="q1" value="wrong">
+HighText Machine Language
+<br>
+
+<input type="radio" name="q1" value="wrong">
+Hyper Transfer Main Language
+
+
+
+<h3>2. Which tag is used to create a heading in HTML?</h3>
+
+<input type="radio" name="q2" value="wrong">
+&lt;p&gt;
+<br>
+
+<input type="radio" name="q2" value="correct">
+&lt;h1&gt;
+<br>
+
+<input type="radio" name="q2" value="wrong">
+&lt;img&gt;
+
+
+
+<h3>3. Which HTML tag is used to create a paragraph?</h3>
+
+<input type="radio" name="q3" value="correct">
+&lt;p&gt;
+<br>
+
+<input type="radio" name="q3" value="wrong">
+&lt;para&gt;
+<br>
+
+<input type="radio" name="q3" value="wrong">
+&lt;text&gt;
+
+
+
+<h3>4. Which tag is used to add an image?</h3>
+
+<input type="radio" name="q4" value="wrong">
+&lt;picture&gt;
+<br>
+
+<input type="radio" name="q4" value="correct">
+&lt;img&gt;
+<br>
+
+<input type="radio" name="q4" value="wrong">
+&lt;image&gt;
+
+
+
+<h3>5. Which tag is used to create a link?</h3>
+
+<input type="radio" name="q5" value="correct">
+&lt;a&gt;
+<br>
+
+<input type="radio" name="q5" value="wrong">
+&lt;link&gt;
+<br>
+
+<input type="radio" name="q5" value="wrong">
+&lt;href&gt;
+
+
+
+<br><br>
+
+
+<button type="button" onclick="checkQuiz()">
+🚀 Submit Quiz
+</button>
+
+
+</form>
+
+
+<h2 id="result"></h2>
+
+
+<button id="cssButton" style="display:none;" onclick="goCSSCity()">
+🏙️ Enter CSS City
+</button>
+
+
+</div>
+
+
+
+
+<script>
+
+
+function speakByte(text){
+
+let speech = new SpeechSynthesisUtterance(text);
+
+speech.rate = 0.9;
+
+speechSynthesis.speak(speech);
+
+}
+
+
+
+
+function checkQuiz(){
+
+
+let score = 0;
+
+let feedback = "";
+
+
+
+let q1 = document.querySelector('input[name="q1"]:checked');
+
+let q2 = document.querySelector('input[name="q2"]:checked');
+
+let q3 = document.querySelector('input[name="q3"]:checked');
+
+let q4 = document.querySelector('input[name="q4"]:checked');
+
+let q5 = document.querySelector('input[name="q5"]:checked');
+
+
+
+
+// Question 1
+
+if(q1 && q1.value=="correct"){
+
+score++;
+
+}
+
+else{
+
+feedback += "❌ Q1: HTML stands for HyperText Markup Language.<br>";
+
+}
+
+
+
+
+// Question 2
+
+if(q2 && q2.value=="correct"){
+
+score++;
+
+}
+
+else{
+
+feedback += "❌ Q2: Heading is created using &lt;h1&gt; tag.<br>";
+
+}
+
+
+
+
+// Question 3
+
+if(q3 && q3.value=="correct"){
+
+score++;
+
+}
+
+else{
+
+feedback += "❌ Q3: Paragraph is created using &lt;p&gt; tag.<br>";
+
+}
+
+
+
+
+// Question 4
+
+if(q4 && q4.value=="correct"){
+
+score++;
+
+}
+
+else{
+
+feedback += "❌ Q4: Image is added using &lt;img&gt; tag.<br>";
+
+}
+
+
+
+
+// Question 5
+
+if(q5 && q5.value=="correct"){
+
+score++;
+
+}
+
+else{
+
+feedback += "❌ Q5: Link is created using &lt;a&gt; tag.<br>";
+
+}
+
+
+
+
+
+document.getElementById("result").innerHTML =
+
+"🎯 Your Score: " + score + "/5 <br><br>" + feedback;
+
+
+
+if(score >= 4){
+
+
+document.getElementById("result").innerHTML +=
+
+"<br>🏆 Excellent Coder! CSS City is Unlocked! 🏙️";
+
+
+
+document.getElementById("cssButton").style.display="block";
+
+
+
+speakByte(
+"Excellent Coder! You completed the HTML quiz and unlocked CSS City."
+);
+
+
+
+}
+
+else{
+
+
+document.getElementById("result").innerHTML +=
+
+"<br>🤖 Byte: Learn from the corrections and try again!";
+
+
+
+speakByte(
+"Good try Coder. Check the corrections and improve your skills."
+);
+
+
+
+}
+
+
+}
+window.onload = function(){
+
+speakByte(
+"Welcome Coder. This is the HTML Forest Quiz. Answer at least four questions correctly to unlock CSS City."
+);
+
+}
+
+
+
+
+function goCSSCity(){
+
+window.location.href="csscity.html";
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>

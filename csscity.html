@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS City - CodeQuery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="css-lesson">
+
+<h1>🏙️ Welcome to CSS City!</h1>
+
+
+<div class="robot">
+
+<h2>🤖 Byte</h2>
+
+<p id="byteText">
+Welcome Coder! You entered CSS City.
+In HTML Forest, you learned how to create webpage structure.
+Now you will learn how to make websites beautiful using CSS.
+</p>
+
+
+<button onclick="speakByte()">
+🔊 Listen to Byte
+</button>
+
+
+</div>
+
+
+
+<h2>🎨 CSS Lesson</h2>
+
+
+<h3>What is CSS?</h3>
+
+<p>
+CSS means Cascading Style Sheets.
+CSS is used to design webpages with colors, fonts, backgrounds and layouts.
+</p>
+
+
+
+<h3>🎨 Colors</h3>
+
+<p>
+CSS colors help us change text and background appearance.
+</p>
+
+<pre>
+h1 {
+ color: blue;
+}
+
+body {
+ background-color: lightblue;
+}
+</pre>
+
+
+
+<h3>🔤 Fonts</h3>
+
+<p>
+CSS fonts change the style and size of text.
+</p>
+
+<pre>
+h1 {
+ font-family: Arial;
+ font-size: 40px;
+}
+</pre>
+
+
+
+<h3>🧱 Borders & Spacing</h3>
+
+<p>
+Borders make elements attractive.
+Padding and margin create space.
+</p>
+
+<pre>
+.box {
+
+border: 2px solid black;
+
+padding: 20px;
+
+margin: 10px;
+
+}
+</pre>
+
+
+
+<a href="cssmission.html">
+
+<button>
+🚀 Start CSS Mission
+</button>
+
+</a>
+
+
+
+</div>
+
+
+
+<script>
+
+function speakByte(){
+
+let text =
+"Welcome Coder. You entered CSS City. In this world you will learn colors, fonts, backgrounds, borders and spacing using CSS.";
+
+
+let speech = new SpeechSynthesisUtterance(text);
+
+
+speech.lang = "en-US";
+
+speech.rate = 1;
+
+speech.pitch = 1;
+
+
+window.speechSynthesis.cancel();
+
+window.speechSynthesis.speak(speech);
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
