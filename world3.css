@@ -1,0 +1,380 @@
+/* ========================================
+   WORLD 3 - ADVANCED CODING BATTLES
+======================================== */
+
+/* ================= BODY ================= */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at top, #312e81, #0f172a 45%, #020617);
+
+    color: white;
+}
+
+
+/* ================= HEADER ================= */
+
+.world3-header {
+    text-align: center;
+    padding: 30px 20px;
+
+    border-bottom: 2px solid #6366f1;
+    background: rgba(15, 23, 42, 0.9);
+}
+
+.world3-header h1 {
+    margin: 0;
+    font-size: 42px;
+    color: #a78bfa;
+
+    text-shadow:
+        0 0 10px #8b5cf6,
+        0 0 25px #6366f1;
+}
+
+.world3-header p {
+    color: #cbd5e1;
+    font-size: 18px;
+}
+
+
+/* ================= STATS ================= */
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.stats span {
+    padding: 10px 20px;
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid #475569;
+}
+
+.stats b {
+    color: #facc15;
+}
+
+
+/* ================= ARENA ================= */
+
+.arena {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 25px;
+}
+
+.arena-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.arena-title h2 {
+    font-size: 30px;
+    color: #f8fafc;
+}
+
+.arena-title p {
+    color: #94a3b8;
+}
+
+
+/* ================= BATTLE ZONES ================= */
+
+.battle-zones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+
+/* ================= BATTLE CARD ================= */
+
+.battle-card {
+    position: relative;
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(99, 102, 241, 0.18),
+            rgba(15, 23, 42, 0.95)
+        );
+
+    border: 2px solid #4f46e5;
+
+    box-shadow:
+        0 0 15px rgba(99, 102, 241, 0.25);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+
+/* ================= HOVER ================= */
+
+.battle-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 0 25px rgba(139, 92, 246, 0.6);
+}
+
+
+/* ================= ICON ================= */
+
+.battle-icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+
+/* ================= CARD TEXT ================= */
+
+.battle-card h2 {
+    color: #c4b5fd;
+    margin: 8px;
+}
+
+.battle-card h3 {
+    color: #f8fafc;
+}
+
+.battle-card p {
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+
+/* ================= BUTTON ================= */
+
+.battle-card button {
+    margin-top: 15px;
+
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #6366f1;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.battle-card button:hover {
+    background: #8b5cf6;
+    transform: scale(1.05);
+}
+
+
+/* ================= LOCKED ================= */
+
+.locked {
+    opacity: 0.5;
+    filter: grayscale(0.4);
+}
+
+.locked:hover {
+    transform: none;
+
+    box-shadow:
+        0 0 15px rgba(99, 102, 241, 0.2);
+}
+
+.locked button {
+    background: #475569;
+    cursor: not-allowed;
+}
+
+
+/* ================= FINAL BOSS ================= */
+
+.boss {
+    grid-column: span 2;
+
+    border: 2px solid #facc15;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(127, 29, 29, 0.4),
+            rgba(15, 23, 42, 0.95)
+        );
+}
+
+.boss .battle-icon {
+    font-size: 65px;
+}
+
+.boss h2 {
+    color: #facc15;
+
+    text-shadow:
+        0 0 10px #facc15;
+}
+
+.boss:hover {
+    box-shadow:
+        0 0 30px rgba(250, 204, 21, 0.5);
+}
+
+
+/* ================= BATTLE BOX ================= */
+
+.battle-box {
+    display: none;
+
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    background: rgba(15, 23, 42, 0.95);
+
+    border: 2px solid #6366f1;
+}
+
+.battle-box textarea {
+    width: 90%;
+    min-height: 150px;
+
+    margin-top: 20px;
+    padding: 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid #475569;
+
+    background: #020617;
+    color: white;
+
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.battle-box button {
+    margin-top: 15px;
+
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #6366f1;
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#result {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* ================= MESSAGE ================= */
+
+.battle-message {
+    max-width: 800px;
+
+    margin: 20px auto;
+    padding: 18px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    background: rgba(30, 41, 59, 0.9);
+
+    border: 1px solid #6366f1;
+}
+
+.battle-message p {
+    margin: 0;
+
+    color: #e2e8f0;
+    font-size: 17px;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+.navigation {
+    text-align: center;
+    margin: 30px;
+}
+
+.navigation button {
+    margin: 8px;
+
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #334155;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.navigation button:hover {
+    background: #6366f1;
+    transform: scale(1.05);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+
+    .world3-header h1 {
+        font-size: 28px;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .battle-zones {
+        grid-template-columns: 1fr;
+    }
+
+    .boss {
+        grid-column: span 1;
+    }
+
+    .arena {
+        padding: 15px;
+    }
+}

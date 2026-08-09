@@ -1,0 +1,288 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0d0d1f;
+    color:white;
+    text-align:center;
+}
+
+h1{
+    margin-top:20px;
+    color:#ffd700;
+}
+
+#kingdom{
+    width:900px;
+    height:550px;
+    margin:20px auto;
+    background:linear-gradient(#1a1a40,#000);
+    border:4px solid #555;
+    border-radius:15px;
+    position:relative;
+    overflow:hidden;
+}
+
+/* Score */
+
+#score{
+    position:absolute;
+    top:10px;
+    right:20px;
+    background:white;
+    color:black;
+    padding:10px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+/* Hero */
+
+#hero{
+    position:absolute;
+    left:80px;
+    bottom:50px;
+    width:80px;
+    z-index:10;
+}
+
+/* Byte */
+
+#byte{
+    position:absolute;
+    right:80px;
+    bottom:50px;
+    width:90px;
+    z-index:10;
+}
+
+/* Monster */
+
+#monster{
+    position:absolute;
+    top:120px;
+    left:380px;
+    font-size:90px;
+    animation:shake 0.6s infinite alternate;
+}
+
+/* Gate */
+
+#gate{
+    position:absolute;
+    top:260px;
+    left:380px;
+    font-size:70px;
+}
+
+/* Message */
+
+#message{
+    position:absolute;
+    bottom:10px;
+    width:100%;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* Mission */
+
+#codeBox{
+
+    display:none;
+
+    position:absolute;
+
+    top:90px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:420px;
+
+    background:white;
+
+    color:black;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    z-index:100;
+
+}
+
+textarea{
+
+    width:90%;
+
+    height:120px;
+
+    font-size:16px;
+
+}
+
+/* Controls */
+
+#controls{
+
+    margin-top:20px;
+
+}
+
+#controls button{
+
+    font-size:25px;
+
+    padding:10px;
+
+    margin:5px;
+
+}
+
+/* Monster Animation */
+
+@keyframes shake{
+
+    from{
+
+        transform:translateX(-5px);
+
+    }
+
+    to{
+
+        transform:translateX(5px);
+
+    }
+
+}
+#victoryBox{
+
+    position:absolute;
+
+    top:120px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:400px;
+
+    background:white;
+
+    color:black;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    z-index:200;
+
+    border:3px solid gold;
+
+}
+#victoryBox h2{
+
+    color:#d4af37;
+
+}
+
+
+#victoryBox p{
+
+    font-size:20px;
+    line-height:1.6;
+
+}
+#monster{
+
+    display:none;
+
+    position:absolute;
+
+    right:150px;
+
+    bottom:80px;
+
+    font-size:80px;
+
+}
+#finalBox{
+
+    position:absolute;
+
+    top:60px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:500px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    border:5px solid gold;
+
+    text-align:center;
+
+    z-index:999;
+
+    color:black;
+
+    font-family:Arial;
+
+}
+.level2-btn{
+
+padding:15px 30px;
+
+font-size:18px;
+
+font-weight:bold;
+
+border:none;
+
+border-radius:12px;
+
+cursor:pointer;
+
+margin-top:20px;
+
+background:#ff9800;
+
+color:white;
+
+box-shadow:0 0 15px orange;
+
+}
+
+
+.level2-btn:hover{
+
+transform:scale(1.05);
+
+}
+#finalBox{
+
+background:white;
+
+color:black;
+
+padding:30px;
+
+margin:30px auto;
+
+width:70%;
+
+border-radius:15px;
+
+text-align:center;
+
+box-shadow:0 0 20px gold;
+
+}

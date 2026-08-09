@@ -1,0 +1,429 @@
+/* ================================
+   JAVASCRIPT KINGDOM LEVEL 2
+================================ */
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #111827;
+
+    color: white;
+
+    text-align: center;
+
+}
+
+
+/* ================= SCORE ================= */
+
+#score {
+
+    background: #1f2937;
+
+    padding: 12px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+}
+
+
+/* ================= KINGDOM ================= */
+
+#kingdom {
+
+    width: 800px;
+
+    height: 520px;
+
+    margin: 20px auto;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border: 5px solid #374151;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            #38bdf8 0%,
+            #38bdf8 35%,
+            #166534 35%,
+            #14532d 100%
+        );
+
+}
+
+
+/* ================= TREES ================= */
+
+.tree {
+
+    position: absolute;
+
+    font-size: 42px;
+
+}
+
+
+.tree1 {
+    left: 40px;
+    top: 70px;
+}
+
+.tree2 {
+    left: 180px;
+    top: 50px;
+}
+
+.tree3 {
+    right: 50px;
+    top: 80px;
+}
+
+.tree4 {
+    right: 180px;
+    top: 45px;
+}
+
+.tree5 {
+    left: 350px;
+    top: 380px;
+}
+
+
+/* ================= ROCKS ================= */
+
+.rock {
+
+    position: absolute;
+
+    font-size: 30px;
+
+}
+
+.rock1 {
+
+    left: 120px;
+
+    bottom: 60px;
+
+}
+
+.rock2 {
+
+    right: 120px;
+
+    bottom: 80px;
+
+}
+
+
+/* ================= COINS ================= */
+
+.coin {
+
+    position: absolute;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+}
+
+
+.coin1 {
+    left: 250px;
+    top: 100px;
+}
+
+.coin2 {
+    left: 430px;
+    top: 150px;
+}
+
+.coin3 {
+    right: 230px;
+    top: 230px;
+}
+
+.coin4 {
+    left: 300px;
+    bottom: 80px;
+}
+
+.coin5 {
+    right: 80px;
+    bottom: 50px;
+}
+
+
+/* ================= BYTE ================= */
+
+#byte {
+
+    position: absolute;
+
+    left: 350px;
+
+    top: 80px;
+
+    font-size: 55px;
+
+    cursor: pointer;
+
+    animation: byteFloat 2s infinite;
+
+}
+
+
+@keyframes byteFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ================= BUG MONSTER ================= */
+
+#bugMonster {
+
+    position: absolute;
+
+    right: 90px;
+
+    top: 300px;
+
+    font-size: 60px;
+
+    animation: monsterMove 1.5s infinite;
+
+}
+
+
+@keyframes monsterMove {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* ================= MISSION BOARD ================= */
+
+#missionBoard {
+
+    position: absolute;
+
+    left: 70px;
+
+    bottom: 120px;
+
+    font-size: 55px;
+
+    cursor: pointer;
+
+}
+
+
+/* ================= GATE ================= */
+
+#gate {
+
+    position: absolute;
+
+    right: 25px;
+
+    top: 170px;
+
+    font-size: 65px;
+
+}
+
+
+/* ================= CASTLE ================= */
+
+#castle {
+
+    position: absolute;
+
+    left: 330px;
+
+    top: 15px;
+
+    font-size: 75px;
+
+}
+
+
+/* ================= HERO ================= */
+
+#hero {
+
+    position: absolute;
+
+    left: 80px;
+
+    top: 420px;
+
+    font-size: 42px;
+
+    z-index: 10;
+
+}
+
+
+/* ================= MESSAGE ================= */
+
+#message {
+
+    width: 760px;
+
+    margin: 10px auto;
+
+    padding: 12px;
+
+    background: #1f2937;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+
+}
+
+
+/* ================= BUTTONS ================= */
+
+button {
+
+    padding: 10px 16px;
+
+    margin: 5px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+}
+
+
+/* ================= CONTROLS ================= */
+
+#controls {
+
+    margin: 10px;
+
+}
+
+
+/* ================= LESSON BOX ================= */
+
+#lessonBox {
+
+    width: 700px;
+
+    margin: 15px auto;
+
+    padding: 20px;
+
+    background: #1f2937;
+
+    border-radius: 15px;
+
+}
+
+
+/* ================= MISSION BOX ================= */
+
+#missionBox {
+
+    width: 700px;
+
+    margin: 15px auto;
+
+    padding: 20px;
+
+    background: #1f2937;
+
+    border: 2px solid #facc15;
+
+    border-radius: 15px;
+
+}
+
+
+/* ================= QUESTION ================= */
+
+#question {
+
+    line-height: 1.6;
+
+}
+
+
+/* ================= ANSWER ================= */
+
+#answer {
+
+    width: 90%;
+
+    height: 180px;
+
+    padding: 10px;
+
+    font-family: monospace;
+
+    font-size: 15px;
+
+    resize: vertical;
+
+}
+
+
+/* ================= RESULT ================= */
+
+#result {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+}
+
+
+/* ================= HINT ================= */
+
+#hint {
+
+    font-size: 16px;
+
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>JavaScript Kingdom - CodeQuery</title>
+
+<link rel="stylesheet" href="jskingdom.css">
+
+</head>
+
+
+<body>
+
+
+<h1>👑 JavaScript Kingdom Adventure</h1>
+
+
+<div id="kingdom">
+
+
+<div id="score">
+
+🪙 Coins: <span id="coins">0</span>
+
+&nbsp;&nbsp;
+
+⭐ XP: <span id="xp">0</span>
+
+</div>
+
+
+
+<img id="hero" src="../images/hero.png">
+
+
+<img id="byte" src="../images/robot.png">
+
+
+
+<!-- Gate -->
+
+<div id="gate">
+
+🚪
+
+</div>
+
+
+<div id="gateName">
+
+Royal Gate
+
+</div>
+
+
+
+<!-- Bug Monster (hidden initially) -->
+
+<div id="monster">
+
+👾
+
+</div>
+
+
+
+<p id="message">
+
+🤖 Byte: Welcome Hero! Open the Royal Gate.
+
+</p>
+
+
+
+<button id="lessonBtn"
+style="display:none;"
+onclick="startJSLesson()">
+
+⚔️ Start Mission
+
+</button>
+
+<!-- Mission Box -->
+
+<div id="codeBox" style="display:none;">
+
+
+<h2>🚪 Gate Mission</h2>
+
+
+<p>
+Create a JavaScript function named
+<b>openGate()</b>
+</p>
+
+
+<textarea id="playerCode"
+placeholder="Type JavaScript code here">
+
+</textarea>
+
+
+<br>
+
+
+<button onclick="checkGate()">
+
+Open Gate
+
+</button>
+
+
+<p id="result"></p>
+
+
+</div>
+
+
+</div>   <!-- KINGDOM CLOSE -->
+
+
+<!-- Certificate -->
+
+<div id="finalBox" style="display:none;">
+
+    <h1>🏆 CODEQUERY CERTIFICATE 🏆</h1>
+
+    <hr>
+
+    <h2>🎉 Congratulations Hero! 🎉</h2>
+    <button
+    id="nextLevelBtn"
+    style="display:none;"
+    onclick="goToLevel2()">
+    🚀 Next Level
+</button>
+
+    <p>
+        This certificate is awarded for successfully completing
+        all coding adventures.
+    </p>
+
+
+    <h3>Completed Worlds:</h3>
+
+    <p>
+        🌳 HTML Forest ✅
+        <br>
+        🏙️ CSS City ✅
+        <br>
+        👑 JavaScript Kingdom ✅
+    </p>
+
+
+    <h2>👑 Rank: CODE HERO</h2>
+
+
+    <p>
+        Skills Unlocked:
+        <br>
+        ⭐ HTML Basics
+        <br>
+        ⭐ CSS Designing
+        <br>
+        ⭐ JavaScript Logic
+    </p>
+
+
+    <hr>
+
+    <h3>
+        🚀 Keep Learning. Keep Coding.
+    </h3>
+
+
+    <br>
+
+
+    <button class="level2-btn" onclick="startLevel2()">
+
+    🔥 Start Level 2 - Advanced Coding
+
+    </button>
+
+
+</div>
+
+
+
+
+
+<!-- Controls -->
+
+<div id="controls">
+
+
+<button onclick="moveHero('up')">
+⬆️
+</button>
+
+
+<br>
+
+
+<button onclick="moveHero('left')">
+⬅️
+</button>
+
+
+<button onclick="moveHero('down')">
+⬇️
+</button>
+
+
+<button onclick="moveHero('right')">
+➡️
+</button>
+
+
+</div>
+
+
+
+
+<script src="../js/jskingdom.js"></script>
+
+
+</body>
+
+</html>
