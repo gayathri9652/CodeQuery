@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>CodeQuery v2.0 Level 2</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/level2.css">
+
+</head>
+
+<body>
+
+
+<div class="home-container">
+
+
+<h1>🔥 CodeQuery v2.0 - Level 2</h1>
+
+
+<h2>🤖 Byte</h2>
+
+
+<p>
+Welcome Coder! 🎮<br>
+You completed Level 1.<br>
+Now enter the Advanced Coding World!
+</p>
+
+
+
+
+<div class="card">
+
+
+<h2>🌳 Advanced HTML Forest</h2>
+
+<p>
+Solve difficult HTML challenges and complete missing codes.
+</p>
+
+
+<button onclick="openHTMLLevel2()">
+
+🌳 Start HTML Challenge
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+<h2 id="cssTitle">
+🏙️ Advanced CSS City 🔒
+</h2>
+
+<p>
+Fix CSS bugs and create advanced designs.
+</p>
+
+
+<button id="cssBtn" disabled>
+
+🔒 Locked
+
+</button>
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+<h2 id="jsTitle">
+⚡ Advanced JavaScript Kingdom 🔒
+</h2>
+
+<p>
+Debug programs and solve logic missions.
+</p>
+
+
+<button id="jsBtn" disabled>
+
+🔒 Locked
+
+</button>
+
+</div>
+
+
+
+
+
+
+<br>
+
+
+<a href="level1.html">
+
+<button>
+
+⬅ Back Level 1
+
+</button>
+
+</a>
+
+
+
+</div>
+
+
+
+
+<script>
+
+
+function openHTMLLevel2(){
+
+window.location.href="htmllevel2.html";
+
+}
+
+
+// CSS Unlock Check
+
+let cssUnlock = localStorage.getItem("Level2_CSSUnlocked");
+
+
+if(cssUnlock=="true"){
+
+
+document.getElementById("cssTitle").innerHTML =
+"🏙️ Advanced CSS City 🔓";
+
+
+let cssBtn =
+document.getElementById("cssBtn");
+
+
+cssBtn.disabled=false;
+
+
+cssBtn.innerHTML =
+"🏙️ Start CSS Challenge";
+
+
+cssBtn.onclick=function(){
+
+window.location.href="csslevel2.html";
+
+}
+
+
+}
+
+
+
+// JS Unlock Check
+
+
+let jsUnlock = localStorage.getItem("Level2_JSUnlocked");
+
+
+if(jsUnlock=="true"){
+
+
+document.getElementById("jsTitle").innerHTML =
+"⚡ Advanced JavaScript Kingdom 🔓";
+
+
+let jsBtn =
+document.getElementById("jsBtn");
+
+
+jsBtn.disabled=false;
+
+
+jsBtn.innerHTML =
+"⚡ Start JS Challenge";
+
+
+jsBtn.onclick=function(){
+
+window.location.href="jslevel2.html";
+
+}
+
+
+}
+
+</script>
+
+
+
+</body>
+
+</html>

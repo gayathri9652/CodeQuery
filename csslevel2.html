@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>CodeQuery v2.0 - CSS Level 2</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/csslevel2.css">
+
+</head>
+
+<body>
+
+<!-- ================= SCORE ================= -->
+
+<div id="score">
+
+    🪙 Coins:
+    <span id="coins">0</span>
+
+    &nbsp;&nbsp;&nbsp;
+
+    ⭐ XP:
+    <span id="xp">0</span>
+
+</div>
+
+
+<!-- ================= TITLE ================= -->
+
+<h1 id="title">
+
+    🏙️ CodeQuery v2.0  
+    <br>
+    ⚡ CSS City - Level 2 ⚡
+
+</h1>
+
+
+<!-- ================= CITY ================= -->
+
+<div id="city">
+
+    <!-- Buildings -->
+
+    <div class="building b1">
+        🏢
+        <span>📦 Box Model Lab</span>
+    </div>
+
+    <div class="building b2">
+        🎯
+        <span>Selector Lab</span>
+    </div>
+
+    <div class="building b3">
+        🧩
+        <span>Flexbox Arena</span>
+    </div>
+
+    <div class="building b4">
+        📍
+        <span>Position Tower</span>
+    </div>
+
+    <div class="building b5">
+        🖱️
+        <span>Hover Zone</span>
+    </div>
+
+    <div class="building b6">
+        📱
+        <span>Responsive Lab</span>
+    </div>
+
+
+    <!-- Roads -->
+
+    <div class="road road1">🛣️</div>
+
+    <div class="road road2">🛣️</div>
+
+
+    <!-- Obstacles -->
+
+    <div class="obstacle o1">🚧</div>
+    <div class="obstacle o2">🚧</div>
+    <div class="obstacle o3">🪨</div>
+
+
+    <!-- Coins -->
+
+    <div class="coin c1">🪙</div>
+    <div class="coin c2">🪙</div>
+    <div class="coin c3">🪙</div>
+    <div class="coin c4">🪙</div>
+    <div class="coin c5">🪙</div>
+
+
+    <!-- Byte -->
+
+    <div id="byte">
+
+        🤖
+
+    </div>
+
+
+    <!-- Mission Terminal -->
+
+    <div id="terminal">
+
+        💻
+
+    </div>
+
+
+    <!-- Locked Gate -->
+
+    <div id="gate">
+
+        🔐
+
+    </div>
+
+
+    <!-- Final Boss -->
+
+    <div id="bossTower">
+
+        👑🏢
+
+        <span>CSS Master Tower</span>
+
+    </div>
+
+
+    <!-- Hero -->
+
+    <div id="hero">
+
+        🧑‍💻
+
+    </div>
+
+</div>
+
+
+<!-- ================= BYTE MESSAGE ================= -->
+
+<div id="message">
+
+    🤖 Byte: Welcome to Advanced CSS City!  
+    <br>
+    Move towards me to begin your training.
+
+</div>
+
+
+<!-- ================= LESSON BOX ================= -->
+
+<div id="lessonBox">
+
+    <h2 id="lessonTitle">
+
+        🤖 Byte's CSS Lesson
+
+    </h2>
+
+
+    <div id="lessonText">
+
+        Welcome Hero! 🎮
+
+    </div>
+
+
+    <button id="voiceBtn" onclick="speakLesson()">
+    🔊 Play Byte Voice
+</button>
+
+<button id="stopVoiceBtn" onclick="stopByteVoice()">
+    🔇 Stop Voice
+</button>
+
+
+    <button id="nextLessonBtn" onclick="nextLesson()">
+
+        ➡️ Next
+
+    </button>
+
+</div>
+
+
+<!-- ================= MISSION BUTTON ================= -->
+
+<button id="missionBtn"
+onclick="startMission()">
+
+    🎯 Start CSS Mission
+
+</button>
+
+
+<!-- ================= MISSION BOX ================= -->
+
+<div id="missionBox">
+
+    <h2 id="missionTitle">
+
+        🎯 CSS Mission
+
+    </h2>
+
+
+    <p id="question">
+
+    </p>
+
+
+    <textarea
+        id="answer"
+        placeholder="💻 Type your CSS code here...">
+    </textarea>
+
+
+    <br><br>
+
+
+    <button onclick="checkAnswer()">
+
+        ✅ Submit Answer
+
+    </button>
+
+
+    <p id="result"></p>
+
+    <p id="hint"></p>
+
+</div>
+
+
+<!-- ================= CONTROLS ================= -->
+
+<div id="controls">
+
+    <button onclick="moveHero('up')">
+
+        ⬆️
+
+    </button>
+
+    <br>
+
+    <button onclick="moveHero('left')">
+
+        ⬅️
+
+    </button>
+
+
+    <button onclick="moveHero('right')">
+
+        ➡️
+
+    </button>
+
+
+    <button onclick="moveHero('down')">
+
+        ⬇️
+
+    </button>
+
+</div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="js/csslevel2.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,309 @@
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>🌍 CodeQuery Worlds</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body {
+
+    background: linear-gradient(
+        180deg,
+        #0f172a,
+        #1e293b,
+        #020617
+    );
+
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    color: white;
+
+}
+
+.home-container {
+
+    background: transparent;
+    box-shadow: none;
+    width: 100%;
+    padding: 30px;
+
+}
+
+h1 {
+
+    color: #ffd700;
+    font-size: 45px;
+
+}
+
+.subtitle {
+
+    color: #cbd5e1;
+    margin-bottom: 40px;
+
+}
+
+.world {
+
+    width: 320px;
+    margin: 25px auto;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+
+    background: rgba(255,255,255,.08);
+
+    border: 2px solid rgba(255,255,255,.2);
+
+    backdrop-filter: blur(8px);
+
+}
+
+.world h2 {
+
+    margin-bottom: 10px;
+
+}
+
+.path {
+
+    font-size: 40px;
+    color: #22c55e;
+
+}
+
+.world button {
+
+    margin-top: 15px;
+
+}
+
+.locked {
+
+    opacity: 0.6;
+
+}
+
+.locked button {
+
+    background: gray;
+    cursor: not-allowed;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="home-container">
+
+
+<h1>🌍 Choose Your World</h1>
+
+
+<p class="subtitle">
+Complete each world to unlock the next adventure!
+</p>
+
+
+<!-- ================= WORLD 1 ================= -->
+
+<div class="world">
+
+    <h2>
+        🌲 World 1 🔓
+    </h2>
+
+    <p>
+        CodeQuery Original Adventure
+    </p>
+
+    <p>
+        ⭐ Difficulty : Easy
+    </p>
+
+    <button onclick="openWorld1()">
+        🚀 Enter World 1
+    </button>
+
+</div>
+
+
+<div class="path">⬇</div>
+
+
+<!-- ================= WORLD 2 ================= -->
+
+<div class="world locked" id="world2">
+
+    <h2 id="world2Title">
+        🔥 World 2 🔒
+    </h2>
+
+    <p>
+        CodeQuery v2.0 Adventure
+    </p>
+
+    <p>
+        ⭐⭐⭐ Difficulty : Hard
+    </p>
+
+    <button id="world2Btn" disabled>
+        🔒 Locked
+    </button>
+
+</div>
+
+
+<div class="path">⬇</div>
+
+
+<!-- ================= WORLD 3 ================= -->
+
+<div class="world locked" id="world3">
+
+    <h2 id="world3Title">
+        👑 World 3 🔒
+    </h2>
+
+    <p>
+        Advanced Coding Battles
+    </p>
+
+    <p>
+        ⭐⭐⭐⭐⭐ Difficulty : Extreme
+    </p>
+
+    <button id="world3Btn" disabled>
+        🔒 Locked
+    </button>
+
+</div>
+
+
+<br>
+
+
+<a href="dashboard.html">
+
+    <button>
+        ⬅ Back Dashboard
+    </button>
+
+</a>
+
+
+</div>
+
+
+<script>
+
+
+// ================= WORLD 1 =================
+
+function openWorld1() {
+
+    window.location.href = "languages.html";
+
+}
+
+
+// ================= CHECK COMPLETION =================
+
+let world1Completed =
+    localStorage.getItem("World1Completed");
+
+let world2Completed =
+    localStorage.getItem("World2Completed");
+
+
+console.log("World 1:", world1Completed);
+console.log("World 2:", world2Completed);
+
+
+// ================= WORLD 2 UNLOCK =================
+
+if (world1Completed === "true") {
+
+    let world2 =
+        document.getElementById("world2");
+
+    let world2Title =
+        document.getElementById("world2Title");
+
+    let world2Btn =
+        document.getElementById("world2Btn");
+
+
+    world2.classList.remove("locked");
+
+    world2Title.innerHTML =
+        "🔥 World 2 🔓";
+
+    world2Btn.disabled = false;
+
+    world2Btn.innerHTML =
+        "🔥 Enter World 2";
+
+
+    world2Btn.onclick = function() {
+
+        window.location.href = "level1.html";
+
+    };
+
+}
+
+
+// ================= WORLD 3 UNLOCK =================
+
+if (world2Completed === "true") {
+
+    let world3 =
+        document.getElementById("world3");
+
+    let world3Title =
+        document.getElementById("world3Title");
+
+    let world3Btn =
+        document.getElementById("world3Btn");
+
+
+    world3.classList.remove("locked");
+
+    world3Title.innerHTML =
+        "👑 World 3 🔓";
+
+    world3Btn.disabled = false;
+
+    world3Btn.innerHTML =
+        "👑 Enter World 3";
+
+
+    world3Btn.onclick = function() {
+
+        window.location.href =
+            "world3.html";
+
+    };
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
+```
+

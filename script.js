@@ -268,17 +268,14 @@ loginForm.addEventListener("submit",function(event){
 
     if(email && password){
 
+    localStorage.setItem("userEmail",email);
+    localStorage.setItem("loggedIn","true");
 
-        localStorage.setItem("userEmail",email);
+    alert("Login Successful 🎮");
 
+    window.location.href="dashboard.html";
 
-        alert("Login Successful 🎮");
-
-
-        window.location.href="dashboard.html";
-
-
-    }
+}
 
 
     else{
@@ -324,5 +321,116 @@ if(signupForm){
 
 
     });
+
+}
+// ===============================
+// DASHBOARD DATA
+// ===============================
+// ===============================
+// DASHBOARD DATA
+// ===============================
+
+let username = localStorage.getItem("username");
+let xp = Number(localStorage.getItem("XP")) || 0;
+let coins = Number(localStorage.getItem("Coins")) || 0;
+
+
+// ===============================
+// PLAYER NAME
+// ===============================
+
+if(document.getElementById("userName")){
+
+    document.getElementById("userName").innerHTML =
+    username || "Code Hero";
+
+}
+
+
+// ===============================
+// XP
+// ===============================
+
+if(document.getElementById("userXP")){
+
+    document.getElementById("userXP").innerHTML = xp;
+
+}
+
+
+// ===============================
+// COINS
+// ===============================
+
+if(document.getElementById("userCoins")){
+
+    document.getElementById("userCoins").innerHTML = coins;
+
+}
+
+
+// ===============================
+// GAME ADVENTURE PROGRESS
+// ===============================
+
+let gameProgress = 10;
+
+
+// World 1 completed
+
+if(localStorage.getItem("World1Completed") === "true"){
+
+    gameProgress = 50;
+
+}
+
+
+// World 2 completed
+
+if(localStorage.getItem("World2Completed") === "true"){
+
+    gameProgress = 100;
+
+}
+
+
+// ===============================
+// GREEN GAME PROGRESS BAR
+// ===============================
+
+if(document.getElementById("progressFill")){
+
+    document.getElementById("progressFill").style.width =
+    gameProgress + "%";
+
+}
+
+
+// ===============================
+// WORLD 2 CERTIFICATE
+// ===============================
+
+if(localStorage.getItem("World2Completed") === "true"){
+
+    if(document.getElementById("certificateBox")){
+
+        document.getElementById("certificateBox").style.display =
+        "block";
+
+    }
+
+}
+
+
+// ===============================
+// LOGIN STATUS
+// ===============================
+
+localStorage.setItem("loggedIn","true");
+function goToLevel2() {
+
+    localStorage.setItem("JSLevelCompleted", "true");
+
+    window.location.href = "level2.html";
 
 }

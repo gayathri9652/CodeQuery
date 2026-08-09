@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>👑 World 3 Complete</title>
+
+<link rel="stylesheet" href="css/world3-victory.css">
+
+</head>
+
+<body>
+
+<div class="victory-container">
+
+    <div class="crown">
+        👑
+    </div>
+
+    <h1>
+        WORLD 3 COMPLETED!
+    </h1>
+
+    <h2>
+        🏆 CODE MASTER
+    </h2>
+
+    <p class="message">
+        Congratulations, Hero!
+    </p>
+
+    <p>
+        You defeated the Final Boss and conquered
+        the Advanced Coding Arena!
+    </p>
+
+
+    <!-- ================= STATS ================= -->
+
+    <div class="final-stats">
+
+        <div class="stat-box">
+
+            <span>⭐</span>
+
+            <h3>
+                World 3 XP
+            </h3>
+
+            <b id="world3XP">
+                0
+            </b>
+
+        </div>
+
+
+        <div class="stat-box">
+
+            <span>🪙</span>
+
+            <h3>
+                World 3 Coins
+            </h3>
+
+            <b id="world3Coins">
+                0
+            </b>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= ACHIEVEMENT ================= -->
+
+    <div class="achievement">
+
+        <div class="badge">
+            🏅
+        </div>
+
+        <h2>
+            Advanced Coding Master
+        </h2>
+
+        <p>
+            All World 3 battles defeated!
+        </p>
+
+    </div>
+
+
+    <!-- ================= BUTTONS ================= -->
+
+    <div class="victory-buttons">
+
+        <button onclick="goCertificate()">
+            📜 View Certificate
+        </button>
+
+
+        <button onclick="goLeaderboard()">
+            🏆 Leaderboard
+        </button>
+
+
+        <button onclick="goDashboard()">
+            🏠 Dashboard
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+let world3XP =
+    Number(localStorage.getItem("world3XP")) || 0;
+
+let world3Coins =
+    Number(localStorage.getItem("world3Coins")) || 0;
+
+
+document.getElementById("world3XP").innerHTML =
+    world3XP;
+
+
+document.getElementById("world3Coins").innerHTML =
+    world3Coins;
+
+
+
+
+
+
+function goLeaderboard() {
+
+    window.location.href =
+        "leader.html";
+
+}
+
+
+function goDashboard() {
+
+    window.location.href =
+        "dashboard.html";
+
+}
+
+</script>
+
+</body>
+
+</html>

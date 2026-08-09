@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>JavaScript Kingdom - Level 2</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jslevel2.css">
+
+</head>
+
+<body>
+
+<!-- ================= SCORE ================= -->
+
+<div id="score">
+
+    ⭐ XP:
+    <span id="xp">0</span>
+
+    &nbsp;&nbsp;&nbsp;
+
+    🪙 Coins:
+    <span id="coins">0</span>
+
+</div>
+
+
+<!-- ================= KINGDOM ================= -->
+
+<div id="kingdom">
+
+
+    <!-- 🌲 Trees -->
+
+    <div class="tree tree1">🌲</div>
+    <div class="tree tree2">🌳</div>
+    <div class="tree tree3">🌲</div>
+    <div class="tree tree4">🌳</div>
+    <div class="tree tree5">🌲</div>
+
+
+    <!-- 🪨 Rocks -->
+
+    <div class="rock rock1">🪨</div>
+    <div class="rock rock2">🪨</div>
+
+
+    <!-- 🪙 Coins -->
+
+    <div class="coin coin1">🪙</div>
+    <div class="coin coin2">🪙</div>
+    <div class="coin coin3">🪙</div>
+    <div class="coin coin4">🪙</div>
+    <div class="coin coin5">🪙</div>
+
+
+    <!-- 🤖 BYTE -->
+
+    <div id="byte">
+
+        🤖
+
+    </div>
+
+
+    <!-- 👾 BUG MONSTER -->
+
+    <div id="bugMonster">
+
+        👾
+
+    </div>
+
+
+    <!-- 📜 MISSION BOARD -->
+
+    <div id="missionBoard">
+
+        📜
+
+    </div>
+
+
+    <!-- 🚪 GATE -->
+
+    <div id="gate">
+
+        🚪🔒
+
+    </div>
+
+
+    <!-- 🏰 CASTLE -->
+
+    <div id="castle">
+
+        🏰
+
+    </div>
+
+
+    <!-- 🧑‍💻 HERO -->
+
+    <div id="hero">
+
+        🧑‍💻
+
+    </div>
+
+
+</div>
+
+
+<!-- ================= BYTE MESSAGE ================= -->
+
+<div id="message">
+
+    🤖 Byte: Welcome to JavaScript Kingdom Level 2!
+
+</div>
+
+
+<!-- ================= MOVEMENT CONTROLS ================= -->
+
+<div id="controls">
+
+    <button onclick="moveHero('up')">
+        ⬆️
+    </button>
+
+    <br>
+
+    <button onclick="moveHero('left')">
+        ⬅️
+    </button>
+
+    <button onclick="moveHero('down')">
+        ⬇️
+    </button>
+
+    <button onclick="moveHero('right')">
+        ➡️
+    </button>
+
+</div>
+
+
+<!-- ================= LESSON BUTTON ================= -->
+
+<button
+    id="lessonBtn"
+    style="display:none;"
+    onclick="startLesson()">
+
+    📚 Start JavaScript Lesson
+
+</button>
+
+
+<!-- ================= LESSON BOX ================= -->
+
+<div
+    id="lessonBox"
+    style="display:none;">
+
+    <h2 id="lessonTitle">
+
+        JavaScript Lesson
+
+    </h2>
+
+
+    <div id="lessonText">
+
+    </div>
+
+
+    <br>
+
+
+    <button onclick="speakLesson()">
+
+        🔊 Play Byte Voice
+
+    </button>
+
+
+    <button onclick="stopByteVoice()">
+
+        🔇 Stop Voice
+
+    </button>
+
+
+    <button onclick="nextLesson()">
+
+        ➡️ Next Lesson
+
+    </button>
+
+</div>
+
+
+<!-- ================= MISSION BUTTON ================= -->
+
+<button
+    id="missionBtn"
+    style="display:none;"
+    onclick="startMission()">
+
+    🎯 Start Mission
+
+</button>
+
+
+<!-- ================= MISSION BOX ================= -->
+
+<div
+    id="missionBox"
+    style="display:none;">
+
+    <h2 id="missionTitle">
+
+        ⚔️ JavaScript Mission
+
+    </h2>
+
+
+    <div id="question">
+
+    </div>
+
+
+    <br>
+
+
+    <textarea
+        id="answer"
+        placeholder="Write your JavaScript code here...">
+    </textarea>
+
+
+    <br><br>
+
+
+    <button onclick="checkAnswer()">
+
+        ⚔️ Submit Attack
+
+    </button>
+
+
+    <p id="result"></p>
+
+    <p id="hint"></p>
+
+</div>
+
+
+<script src="js/jslevel2.js"></script>
+
+</body>
+
+</html>

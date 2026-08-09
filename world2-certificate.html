@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>CodeQuery v2.0 Certificate</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="home-container">
+
+<h1>📜 Certificate of Completion</h1>
+
+<div class="certificate"></div>
+
+<h2>🎉 Congratulations!</h2>
+
+<p>
+This certificate is proudly presented to
+</p>
+
+<h2 id="playerName">
+Code Hero
+</h2>
+
+<p>
+For successfully completing
+</p>
+
+<h2>
+🚀 CodeQuery v2.0 – Challenge World
+</h2>
+
+<p>
+Completed Levels:
+</p>
+
+<p>
+🌳 HTML Forest – Level 1 ✅
+</p>
+
+<p>
+🏙️ CSS City – Level 2 ✅
+</p>
+
+<p>
+⚡ JavaScript Kingdom – Level 3 ✅
+</p>
+
+<h2>
+👑 CodeQuery v2.0 Champion
+</h2>
+
+<p>
+Date:
+<span id="date"></span>
+</p>
+
+</div>
+
+<br>
+
+<button onclick="window.print()">
+🖨️ Print Certificate
+</button>
+
+<br><br>
+
+<a href="dashboard.html">
+
+<button>
+⬅ Back Dashboard
+</button>
+
+</a>
+
+<script>
+
+// Save World 2 completion
+
+localStorage.setItem("World2Completed", "true");
+
+// Save last page
+
+localStorage.setItem(
+    "lastPage",
+    "world2-certificate.html"
+);
+
+// Get player name
+
+let name = localStorage.getItem("username");
+
+if (name) {
+
+    document.getElementById("playerName").innerHTML = name;
+
+}
+
+// Display current date
+
+let today = new Date();
+
+document.getElementById("date").innerHTML =
+    today.toLocaleDateString();
+
+</script>
+
+</body>
+
+</html>

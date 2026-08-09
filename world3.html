@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>👑 World 3 - Coding Battles</title>
+
+<link rel="stylesheet" href="css/world3.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<div class="world3-header">
+
+```
+<h1>
+    👑 WORLD 3: CODING BATTLES
+</h1>
+
+<p>
+    ⚔️ Welcome to the Advanced Coding Arena!
+</p>
+
+<div class="stats">
+
+    <span>
+        ⭐ XP:
+        <b id="xp">0</b>
+    </span>
+
+    <span>
+        🪙 Coins:
+        <b id="coins">0</b>
+    </span>
+
+</div>
+```
+
+</div>
+
+<!-- ================= ARENA ================= -->
+
+<div class="arena">
+
+```
+<div class="arena-title">
+
+    <h2>
+        ⚔️ ADVANCED CODING ARENA
+    </h2>
+
+    <p>
+        Only skilled Code Heroes can survive here...
+    </p>
+
+</div>
+
+
+
+<!-- ================= BATTLE ZONES ================= -->
+
+<div class="battle-zones">
+
+
+    <!-- BATTLE 1 -->
+
+    <div class="battle-card" id="battle1">
+
+        <div class="battle-icon">
+            🧠
+        </div>
+
+        <h2>
+            Battle 1
+        </h2>
+
+        <h3>
+            Logic Gate
+        </h3>
+
+        <p>
+            Test your programming logic.
+        </p>
+
+        <button onclick="startBattle(1)">
+            ⚔️ Enter Battle
+        </button>
+
+    </div>
+
+
+
+    <!-- BATTLE 2 -->
+
+    <div class="battle-card locked" id="battle2">
+
+        <div class="battle-icon">
+            👾
+        </div>
+
+        <h2>
+            Battle 2
+        </h2>
+
+        <h3>
+            Bug Hunter
+        </h3>
+
+        <p>
+            Find and defeat the hidden bugs.
+        </p>
+
+        <button id="battle2Btn" disabled>
+            🔒 Locked
+        </button>
+
+    </div>
+
+
+
+    <!-- BATTLE 3 -->
+
+    <div class="battle-card locked" id="battle3">
+
+        <div class="battle-icon">
+            🧩
+        </div>
+
+        <h2>
+            Battle 3
+        </h2>
+
+        <h3>
+            Code Puzzle
+        </h3>
+
+        <p>
+            Solve advanced coding puzzles.
+        </p>
+
+        <button id="battle3Btn" disabled>
+            🔒 Locked
+        </button>
+
+    </div>
+
+
+
+    <!-- FINAL BOSS -->
+
+    <div class="battle-card boss locked" id="bossBattle">
+
+        <div class="battle-icon">
+            👑
+        </div>
+
+        <h2>
+            FINAL BOSS
+        </h2>
+
+        <h3>
+            💀 Code Master
+        </h3>
+
+        <p>
+            Defeat the ultimate coding challenge!
+        </p>
+
+        <button id="bossBtn" disabled>
+            🔒 Locked
+        </button>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ================= BATTLE BOX ================= -->
+
+<div class="battle-box" id="battleBox">
+
+    <h2 id="battleTitle">
+        ⚔️ Battle
+    </h2>
+
+    <div id="question">
+        Challenge loading...
+    </div>
+
+    <textarea
+        id="answer"
+        placeholder="Write your JavaScript code here..."
+    ></textarea>
+
+    <br>
+
+    <button onclick="checkBattle()">
+        ⚔️ Submit Code
+    </button>
+
+    <p id="result"></p>
+
+</div>
+
+
+
+<!-- ================= MESSAGE ================= -->
+
+<div class="battle-message">
+
+    <p id="message">
+        🤖 Byte: Welcome to World 3, Hero!
+    </p>
+
+</div>
+
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<div class="navigation">
+
+    <a href="worlds.html">
+
+        <button>
+            🌍 Back to Worlds
+        </button>
+
+    </a>
+
+    <a href="dashboard.html">
+
+        <button>
+            🏠 Dashboard
+        </button>
+
+    </a>
+
+</div>
+```
+
+</div>
+
+<script src="js/world3.js"></script>
+
+</body>
+
+</html>
+
+

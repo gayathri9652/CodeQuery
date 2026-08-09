@@ -1,63 +1,58 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
 
 <title>CodeQuery Leaderboard</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
-
 <body>
 
-
 <div class="home-container">
-
 
 <h1>🏆 CodeQuery Leaderboard</h1>
 
 <h2>Top Coding Heroes</h2>
 
-
 <div class="card">
-
 
 <h3>🥇 Coding Master</h3>
 <p>⭐ XP: 500</p>
 
-
 <h3>🥈 Code Warrior</h3>
 <p>⭐ XP: 350</p>
-
 
 <h3>🥉 Bug Hunter</h3>
 <p>⭐ XP: 250</p>
 
-
-
 <hr>
 
-
 <h2>👤 Your Score</h2>
-
 
 <p>
 Name:
 <span id="playerName">Coder</span>
 </p>
 
-
 <p>
 ⭐ XP:
 <span id="playerXP">0</span>
 </p>
 
+<p>
+🪙 Coins:
+<span id="playerCoins">0</span>
+</p>
+
+<p id="worldStatus"></p>
 
 </div>
 
-
+<br>
 
 <a href="dashboard.html">
 
@@ -67,33 +62,49 @@ Name:
 
 </a>
 
-
-
 </div>
-
-
 
 <script>
 
+// Save last page
 
-let name = localStorage.getItem("username");
-
-let xp = localStorage.getItem("XP") || 0;
-console.log("Saved XP:", xp);
+localStorage.setItem("lastPage", "leader.html");
 
 
-if(name){
+// Get player data
 
-document.getElementById("playerName").innerHTML=name;
+let name = localStorage.getItem("username") || "Coder";
+
+let xp = Number(localStorage.getItem("XP")) || 0;
+
+let coins = Number(localStorage.getItem("Coins")) || 0;
+
+
+// Display player name
+
+document.getElementById("playerName").innerHTML = name;
+
+
+// Display XP
+
+document.getElementById("playerXP").innerHTML = xp;
+
+
+// Display Coins
+
+document.getElementById("playerCoins").innerHTML = coins;
+
+
+// World 2 status
+
+if(localStorage.getItem("World2Completed") === "true"){
+
+    document.getElementById("worldStatus").innerHTML =
+    "🏆 World 2 Completed!";
 
 }
 
-
-document.getElementById("playerXP").innerHTML=xp;
-
-
 </script>
-
 
 </body>
 

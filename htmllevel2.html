@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Advanced HTML Forest - Level 2</title>
+
+<link rel="stylesheet" href="css/htmllevel2.css">
+
+</head>
+
+<body>
+
+<h1>🌳 Advanced HTML Forest</h1>
+
+<div id="game">
+
+    <!-- Score -->
+
+    <div id="score">
+
+        ⭐ XP :
+        <span id="xp">0</span>
+
+        &nbsp;&nbsp;&nbsp;
+
+        🪙 Coins :
+        <span id="coins">0</span>
+
+    </div>
+
+
+    <!-- Forest -->
+
+    <div id="forest">
+
+        <!-- Trees -->
+
+        <div class="tree t1">🌲</div>
+        <div class="tree t2">🌳</div>
+        <div class="tree t3">🌲</div>
+        <div class="tree t4">🌳</div>
+        <div class="tree t5">🌲</div>
+
+
+        <!-- Rocks -->
+
+        <div class="rock r1">🪨</div>
+        <div class="rock r2">🪨</div>
+
+
+        <!-- Coins -->
+
+        <div class="coin c1">🪙</div>
+        <div class="coin c2">🪙</div>
+        <div class="coin c3">🪙</div>
+        <div class="coin c4">🪙</div>
+        <div class="coin c5">🪙</div>
+
+
+        <!-- Byte -->
+
+        <div id="byte">
+
+            🤖
+
+        </div>
+
+
+        <!-- Mission Board -->
+
+        <div id="board">
+
+            📜
+
+        </div>
+
+
+        <!-- Gate -->
+
+        <div id="gate">
+
+            🚪🔒
+
+        </div>
+
+
+        <!-- Hero -->
+
+        <div id="hero">
+
+            🧑‍💻
+
+        </div>
+
+    </div>
+
+
+    <!-- Message -->
+
+    <p id="message">
+
+        🤖 Byte: Welcome Hero! This is the Advanced HTML Forest.
+
+    </p>
+
+
+    <!-- Start Mission -->
+
+    <button id="missionBtn"
+    style="display:none;"
+    onclick="startMission()">
+
+        📜 Start Mission
+
+    </button>
+
+
+    <!-- Mission Box -->
+
+    <div id="missionBox" style="display:none;">
+
+        <h2 id="missionTitle">
+
+            Mission 1
+
+        </h2>
+
+        <p id="question">
+
+        </p>
+
+        <textarea
+        id="answer"
+        placeholder="Type your HTML code here">
+
+        </textarea>
+
+        <br><br>
+
+        <button onclick="checkAnswer()">
+
+            ✅ Submit
+
+        </button>
+
+        <p id="result"></p>
+
+        <p id="hint"></p>
+
+    </div>
+    <!-- Enter CSS City -->
+
+<button
+    id="nextLevelBtn"
+    style="display:none;"
+    onclick="goToCSSCity()">
+
+    🏙️ Enter CSS City
+
+</button>
+
+</div>
+
+
+<!-- Controls -->
+
+<div id="controls">
+
+<button onclick="moveHero('up')">
+⬆️
+</button>
+
+<br>
+
+<button onclick="moveHero('left')">
+⬅️
+</button>
+
+<button onclick="moveHero('down')">
+⬇️
+</button>
+
+<button onclick="moveHero('right')">
+➡️
+</button>
+
+</div>
+
+
+<script src="js/htmllevel2.js"></script>
+
+</body>
+</html>

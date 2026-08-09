@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>CodeQuery v2.0 Level 1</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="home-container">
+
+
+<h1>🔥 CodeQuery v2.0</h1>
+
+<h2>🌍 World 2 - Level 1 Adventure</h2>
+
+
+<div class="card">
+
+
+<h2>🌳 HTML Forest</h2>
+
+<p>
+Learn HTML and build your first webpage.
+</p>
+
+
+<button onclick="openHTML()">
+
+🌳 Enter HTML Forest 🔓
+
+</button>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+
+<h2 id="cssTitle">
+
+🏙️ CSS City 🔒
+
+</h2>
+
+
+<p>
+Design beautiful websites using CSS.
+</p>
+
+
+<button id="cssBtn" disabled>
+
+🔒 Locked
+
+</button>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+
+<h2 id="jsTitle">
+
+⚡ JavaScript Kingdom 🔒
+
+</h2>
+
+
+<p>
+Solve logic missions and defeat bugs.
+</p>
+
+
+<button id="jsBtn" disabled>
+
+🔒 Locked
+
+</button>
+
+
+</div>
+
+
+
+<br>
+
+
+<button disabled>
+
+🔒 Level 2 Locked
+
+</button>
+
+
+</div>
+
+
+
+<script>
+
+
+function openHTML(){
+
+window.location.href="forestgame.html";
+
+}
+
+
+// CSS Unlock
+
+let cssUnlock = localStorage.getItem("World2_CSSUnlocked");
+
+
+if(cssUnlock=="true"){
+
+document.getElementById("cssTitle").innerHTML =
+"🏙️ CSS City 🔓";
+
+
+let cssBtn =
+document.getElementById("cssBtn");
+
+
+cssBtn.disabled=false;
+
+
+cssBtn.innerHTML =
+"🏙️ Enter CSS City";
+
+
+cssBtn.onclick=function(){
+
+window.location.href="csscity.html";
+
+}
+
+
+}
+
+
+
+// JS Unlock
+
+
+let jsUnlock = localStorage.getItem("World2_JSUnlocked");
+
+
+if(jsUnlock=="true"){
+
+
+document.getElementById("jsTitle").innerHTML =
+"⚡ JavaScript Kingdom 🔓";
+
+
+let jsBtn =
+document.getElementById("jsBtn");
+
+
+jsBtn.disabled=false;
+
+
+jsBtn.innerHTML =
+"⚡ Enter JavaScript Kingdom";
+
+
+jsBtn.onclick=function(){
+
+window.location.href="jskingdom.html";
+
+}
+
+
+}
+
+
+</script>
+<a href="worlds.html">
+
+<button>
+
+⬅ Back Worlds
+
+</button>
+
+</a>
+
+
+
+</body>
+
+</html>

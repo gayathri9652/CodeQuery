@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>HTML Forest Adventure - CodeQuery</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+.forest-game{
+
+height:600px;
+background-image:url("images/foresthtml.png");
+background-size:cover;
+background-position:center;
+position:relative;
+overflow:hidden;
+
+}
+
+
+#hero{
+
+position:absolute;
+left:100px;
+top:400px;
+width:80px;
+height:80px;
+object-fit:contain;
+
+}
+
+
+#byte{
+
+position:absolute;
+left:500px;
+top:300px;
+width:80px;
+height:80px;
+object-fit:contain;
+
+}
+
+
+#coin{
+
+position:absolute;
+left:300px;
+top:350px;
+width:50px;
+height:50px;
+object-fit:contain;
+
+}
+
+
+#message{
+
+background:white;
+color:black;
+padding:15px;
+width:400px;
+margin:auto;
+border-radius:10px;
+
+}
+
+
+#missionBtn{
+
+padding:12px 20px;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
+margin-top:20px;
+
+}
+#controls{
+
+position:absolute;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+text-align:center;
+
+}
+
+
+#controls button{
+
+font-size:25px;
+padding:10px;
+margin:5px;
+border-radius:10px;
+cursor:pointer;
+
+}
+#score{
+
+position:absolute;
+top:10px;
+right:20px;
+background:white;
+padding:10px;
+border-radius:10px;
+font-size:18px;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="forest-game">
+
+
+<h1>🌳 HTML Forest Adventure</h1>
+<div id="score">
+
+🪙 Coins: <span id="coins">0</span>
+&nbsp;&nbsp;
+⭐ XP: <span id="xp">0</span>
+
+</div>
+
+
+<img id="byte" src="images/robot.png">
+
+
+<img id="hero" src="images/hero.png">
+
+
+<img id="coin" src="images/coin.png">
+<p id="message">
+🤖 Byte: Use arrow keys and come near me!
+</p>
+
+
+<button id="missionBtn"
+style="display:none;"
+onclick="startMission()">
+
+🎯 Start HTML Mission
+
+</button>
+
+
+<div id="codeBox" style="display:none;">
+
+<textarea id="playerCode"
+placeholder="Type your HTML code here"></textarea>
+
+<br>
+
+<button onclick="checkAnswer()">
+Submit Answer
+</button>
+
+<p id="answerResult"></p>
+
+</div>
+<div id="controls">
+
+<button onclick="moveHero('up')">⬆️</button>
+
+<br>
+
+<button onclick="moveHero('left')">⬅️</button>
+
+<button onclick="moveHero('down')">⬇️</button>
+
+<button onclick="moveHero('right')">➡️</button>
+
+</div>
+<div id="rewardBox" style="display:none;">
+
+<h2>🎉 Mission Completed!</h2>
+
+<p>🏆 Badge Unlocked: HTML Beginner</p>
+
+<p>🌆 CSS City Unlocked 🔓</p>
+
+<button onclick="goToCSSCity()">
+Enter CSS City
+</button>
+
+</div>
+
+
+</div>
+
+
+<script src="js/forest.js"></script>
+
+
+</body>
+
+</html>

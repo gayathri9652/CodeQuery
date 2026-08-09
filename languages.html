@@ -5,7 +5,7 @@
 
 <title>CodeQuery Languages</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -48,7 +48,6 @@ Learn webpage structure and HTML tags.
 
 
 
-
 <div class="card">
 
 
@@ -72,7 +71,6 @@ Design beautiful websites using CSS.
 
 
 </div>
-
 
 
 
@@ -133,6 +131,7 @@ Fight bugs using JavaScript powers.
 
 
 <script>
+    localStorage.setItem("lastPage","languages.html");
     
 
 function openHTML(){
@@ -146,86 +145,7 @@ window.location.href="lesson.html";
 
 
 
-// CSS Unlock Check
 
-
-let cssUnlock = localStorage.getItem("CSSUnlocked");
-
-
-
-if(cssUnlock=="true"){
-
-
-document.getElementById("cssTitle").innerHTML =
-"🏙️ CSS City 🔓";
-
-
-let cssButton =
-document.getElementById("cssBtn");
-
-
-cssButton.disabled=false;
-
-
-cssButton.innerHTML =
-"🏙️ Enter CSS City";
-
-
-cssButton.onclick=function(){
-
-window.location.href="cssmission.html";
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-// JavaScript Unlock Check
-
-
-let jsUnlock = localStorage.getItem("JSUnlocked");
-
-
-
-if(jsUnlock=="true"){
-
-
-document.getElementById("jsTitle").innerHTML =
-"⚡ JavaScript Kingdom 🔓";
-
-
-
-let jsButton =
-document.getElementById("jsBtn");
-
-
-
-jsButton.disabled=false;
-
-
-jsButton.innerHTML =
-"⚡ Enter JavaScript Kingdom";
-
-
-
-jsButton.onclick=function(){
-
-window.location.href="jsmission.html";
-
-}
-
-
-
-}
 
 
 
