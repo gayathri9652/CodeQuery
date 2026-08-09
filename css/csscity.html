@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>CSS City - CodeQuery</title>
+
+<link rel="stylesheet" href="csscity.css">
+
+</head>
+
+
+<body>
+
+
+<h1>🏙️ CSS City Adventure</h1>
+
+
+<div id="city">
+
+
+<div id="score">
+
+🪙 Coins: <span id="coins">0</span>
+
+&nbsp;&nbsp;
+
+⭐ XP: <span id="xp">0</span>
+
+</div>
+
+
+
+<img id="hero" src="../images/hero.png" alt="Hero">
+
+
+<img id="byte" src="../images/robot.png" alt="Byte">
+
+
+
+<div id="building">
+
+    🏢
+    
+    <div id="buildingName">Code Tower</div>
+</div>
+
+    <h3 id="buildingName">Code Tower</h3>
+
+</div>
+
+
+
+<p id="message">
+
+🤖 Byte: Welcome to CSS City! Move towards me.
+
+</p>
+
+
+
+
+<button id="lessonBtn"
+style="display:none;"
+onclick="startCSSLesson()">
+
+🎯 Start CSS Mission
+
+</button>
+
+
+
+
+<div id="codeBox" style="display:none;">
+
+
+<h2>🎨 CSS Mission</h2>
+
+
+<p>
+Change Code Tower color to red.
+</p>
+
+
+<textarea id="playerCode"
+placeholder="Type CSS code here"></textarea>
+
+
+<br>
+
+
+<button onclick="checkCSS()">
+
+Submit Answer
+
+</button>
+
+
+<p id="result"></p>
+
+
+</div>
+<div id="jsReward" style="display:none;">
+
+<h2>🎉 CSS Mission Completed!</h2>
+
+<p>⚡ JavaScript Kingdom Unlocked 🔓</p>
+
+<button onclick="goToJS()">
+⚡ Enter JavaScript Kingdom
+</button>
+
+</div>
+
+
+
+</div>
+
+
+
+
+<!-- Controls outside city -->
+
+<div id="controls">
+
+
+<button onclick="moveUp()">
+
+⬆️
+
+</button>
+
+
+<br>
+
+
+<button onclick="moveLeft()">
+
+⬅️
+
+</button>
+
+
+<button onclick="moveDown()">
+
+⬇️
+
+</button>
+
+
+<button onclick="moveRight()">
+
+➡️
+
+</button>
+
+
+</div>
+
+
+
+
+<script src="../js/csscity.js"></script>
+
+
+</body>
+
+</html>

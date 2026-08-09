@@ -1,0 +1,333 @@
+/* ========================================
+   WORLD 3 - VICTORY SCREEN
+======================================== */
+
+
+/* ================= BODY ================= */
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #4c1d95,
+            #1e1b4b 45%,
+            #020617
+        );
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow-x: hidden;
+
+}
+
+
+/* ================= VICTORY CONTAINER ================= */
+
+.victory-container {
+
+    width: 90%;
+
+    max-width: 850px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background:
+        rgba(15, 23, 42, 0.88);
+
+    border: 2px solid #8b5cf6;
+
+    box-shadow:
+        0 0 25px rgba(139, 92, 246, 0.5),
+        0 0 70px rgba(99, 102, 241, 0.25);
+
+}
+
+
+/* ================= CROWN ================= */
+
+.crown {
+
+    font-size: 90px;
+
+    animation:
+        crownGlow 2s infinite alternate;
+
+}
+
+
+@keyframes crownGlow {
+
+    from {
+
+        transform: scale(1);
+
+        filter:
+            drop-shadow(
+                0 0 5px #facc15
+            );
+
+    }
+
+    to {
+
+        transform: scale(1.12);
+
+        filter:
+            drop-shadow(
+                0 0 25px #facc15
+            );
+
+    }
+
+}
+
+
+/* ================= TITLE ================= */
+
+.victory-container h1 {
+
+    margin: 10px 0;
+
+    font-size: 48px;
+
+    color: #facc15;
+
+    text-shadow:
+        0 0 10px #facc15,
+        0 0 25px #f59e0b;
+
+}
+
+
+.victory-container h2 {
+
+    color: #c4b5fd;
+
+}
+
+
+/* ================= MESSAGE ================= */
+
+.message {
+
+    font-size: 24px;
+
+    color: #a78bfa;
+
+    font-weight: bold;
+
+}
+
+
+.victory-container > p {
+
+    color: #cbd5e1;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+}
+
+
+/* ================= FINAL STATS ================= */
+
+.final-stats {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin: 30px auto;
+
+    flex-wrap: wrap;
+
+}
+
+
+.stat-box {
+
+    width: 220px;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    border: 1px solid #6366f1;
+
+    box-shadow:
+        0 0 15px rgba(99,102,241,0.2);
+
+}
+
+
+.stat-box span {
+
+    font-size: 35px;
+
+}
+
+
+.stat-box h3 {
+
+    color: #cbd5e1;
+
+    margin: 10px 0;
+
+}
+
+
+.stat-box b {
+
+    font-size: 30px;
+
+    color: #facc15;
+
+}
+
+
+/* ================= ACHIEVEMENT ================= */
+
+.achievement {
+
+    margin: 30px auto;
+
+    padding: 20px;
+
+    max-width: 500px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(99,102,241,0.2),
+            rgba(124,58,237,0.15)
+        );
+
+    border: 2px solid #a78bfa;
+
+}
+
+
+.badge {
+
+    font-size: 55px;
+
+}
+
+
+.achievement h2 {
+
+    color: #facc15;
+
+}
+
+
+.achievement p {
+
+    color: #cbd5e1;
+
+}
+
+
+/* ================= BUTTONS ================= */
+
+.victory-buttons {
+
+    margin-top: 30px;
+
+}
+
+
+.victory-buttons button {
+
+    margin: 8px;
+
+    padding: 13px 22px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #6366f1;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.victory-buttons button:hover {
+
+    background: #8b5cf6;
+
+    transform: translateY(-3px) scale(1.03);
+
+    box-shadow:
+        0 0 18px rgba(139,92,246,0.6);
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .victory-container {
+
+        padding: 30px 18px;
+
+    }
+
+
+    .victory-container h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .crown {
+
+        font-size: 70px;
+
+    }
+
+
+    .stat-box {
+
+        width: 80%;
+
+    }
+
+}
