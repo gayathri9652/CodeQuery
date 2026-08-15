@@ -2,165 +2,144 @@
 <html>
 
 <head>
-
-<title>CSS City - CodeQuery</title>
-
-<link rel="stylesheet" href="csscity.css">
-
+    <title>CSS City - CodeQuery</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 
 <body>
 
+<div class="css-lesson">
 
-<h1>🏙️ CSS City Adventure</h1>
-
-
-<div id="city">
+<h1>🏙️ Welcome to CSS City!</h1>
 
 
-<div id="score">
+<div class="robot">
 
-🪙 Coins: <span id="coins">0</span>
+<h2>🤖 Byte</h2>
 
-&nbsp;&nbsp;
-
-⭐ XP: <span id="xp">0</span>
-
-</div>
-
-
-
-<img id="hero" src="hero.png" alt="Hero">
-
-
-<img id="byte" src="robot.png" alt="Byte">
-
-
-
-<div id="building">
-
-    🏢
-    
-    <div id="buildingName">Code Tower</div>
-</div>
-
-    <h3 id="buildingName">Code Tower</h3>
-
-</div>
-
-
-
-<p id="message">
-
-🤖 Byte: Welcome to CSS City! Move towards me.
-
+<p id="byteText">
+Welcome Coder! You entered CSS City.
+In HTML Forest, you learned how to create webpage structure.
+Now you will learn how to make websites beautiful using CSS.
 </p>
 
 
-
-
-<button id="lessonBtn"
-style="display:none;"
-onclick="startCSSLesson()">
-
-🎯 Start CSS Mission
-
+<button onclick="speakByte()">
+🔊 Listen to Byte
 </button>
 
 
+</div>
 
 
-<div id="codeBox" style="display:none;">
+
+<h2>🎨 CSS Lesson</h2>
 
 
-<h2>🎨 CSS Mission</h2>
-
+<h3>What is CSS?</h3>
 
 <p>
-Change Code Tower color to red.
+CSS means Cascading Style Sheets.
+CSS is used to design webpages with colors, fonts, backgrounds and layouts.
 </p>
 
 
-<textarea id="playerCode"
-placeholder="Type CSS code here"></textarea>
+
+<h3>🎨 Colors</h3>
+
+<p>
+CSS colors help us change text and background appearance.
+</p>
+
+<pre>
+h1 {
+ color: blue;
+}
+
+body {
+ background-color: lightblue;
+}
+</pre>
 
 
-<br>
+
+<h3>🔤 Fonts</h3>
+
+<p>
+CSS fonts change the style and size of text.
+</p>
+
+<pre>
+h1 {
+ font-family: Arial;
+ font-size: 40px;
+}
+</pre>
 
 
-<button onclick="checkCSS()">
 
-Submit Answer
+<h3>🧱 Borders & Spacing</h3>
 
+<p>
+Borders make elements attractive.
+Padding and margin create space.
+</p>
+
+<pre>
+.box {
+
+border: 2px solid black;
+
+padding: 20px;
+
+margin: 10px;
+
+}
+</pre>
+
+
+
+<a href="cssmission.html">
+
+<button>
+🚀 Start CSS Mission
 </button>
 
+</a>
 
-<p id="result"></p>
-
-
-</div>
-<div id="jsReward" style="display:none;">
-
-<h2>🎉 CSS Mission Completed!</h2>
-
-<p>⚡ JavaScript Kingdom Unlocked 🔓</p>
-
-<button onclick="goToJS()">
-⚡ Enter JavaScript Kingdom
-</button>
-
-</div>
-
-
-
-</div>
-
-
-
-
-<!-- Controls outside city -->
-
-<div id="controls">
-
-
-<button onclick="moveUp()">
-
-⬆️
-
-</button>
-
-
-<br>
-
-
-<button onclick="moveLeft()">
-
-⬅️
-
-</button>
-
-
-<button onclick="moveDown()">
-
-⬇️
-
-</button>
-
-
-<button onclick="moveRight()">
-
-➡️
-
-</button>
 
 
 </div>
 
 
 
+<script>
+    localStorage.setItem("lastPage","csscity.html");
 
-<script src="../js/csscity.js"></script>
+function speakByte(){
+
+let text =
+"Welcome Coder. You entered CSS City. In this world you will learn colors, fonts, backgrounds, borders and spacing using CSS.";
+
+
+let speech = new SpeechSynthesisUtterance(text);
+
+
+speech.lang = "en-US";
+
+speech.rate = 1;
+
+speech.pitch = 1;
+
+
+window.speechSynthesis.cancel();
+
+window.speechSynthesis.speak(speech);
+
+}
+
+
+</script>
 
 
 </body>
